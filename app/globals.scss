@@ -5,7 +5,6 @@
 .page-padding {
   @apply px-4;
 }
-
 @media (min-width: 375px) {
   .page-padding {
     @apply px-6;
@@ -35,18 +34,21 @@
   .page-padding {
     @apply px-24;
   }
-} 
+}/*# sourceMappingURL=App.css.map */
+
 .HERO {
-  background-image: url(/images/KVS-bg.webp);
-  background-size: cover;
+  
+    background-image: url(/images/KVS-bg.webp);
+    background-size: cover;
+    
 }
 
 .HERO::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(34, 61, 86, 0.6588235294);
-}/*# sourceMappingURL=globals.css.map */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #223d56a8;
+}
