@@ -13,7 +13,7 @@ export default function Home() {
             <h4 className="text-3xl">
               Ta kontakt for en uforpliktende prat, så finner vi en løsning.
             </h4>
-            <button className="text-3xl text-white bg-KVS-primary w-fit py-4 px-8 rounded-full">
+            <button className="text-3xl text-white bg-KVS-primary w-fit py-4 px-8 rounded-full hover:scale-105 duration-100 active:scale-95">
               Ta kontakt
             </button>
           </div>
