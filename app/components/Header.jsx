@@ -1,11 +1,15 @@
+import Image from "next/image";
+
 export const Header = () => {
   return (
-    <header className="my-8 z-20 h-20 flex items-center justify-between page-padding">
+    <header className="z-20 h-20 flex items-center justify-between my-8 page-padding">
       <figure>
-        <img
+        <Image
+          width={200}
+          height={200}
           src="/images/logo/KVS-logo.png"
           alt="logo"
-          className="h-20 z-10 rounded-md"
+          className="h-20 w-full z-10 rounded-md"
         />
       </figure>
 

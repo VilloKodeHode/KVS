@@ -36,19 +36,3 @@
   }
 }/*# sourceMappingURL=App.css.map */
 
-.HERO {
-  
-    background-image: url(/images/KVS-bg.webp);
-    background-size: cover;
-    
-}
-
-.HERO::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #223d56a8;
-}

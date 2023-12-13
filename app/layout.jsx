@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const figtree = Figtree({ subsets: ["latin"] });
 
 export const Metadata = {
   title: "Create Next App",
@@ -16,7 +16,9 @@ export const PageLayout = ({ children }) => {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-x-hidden `}>
+      <body
+        className={`${figtree.className} overflow-x-hidden bg-KVS-primary bg-opacity-75`}
+      >
         <Header />
         <PageLayout>{children}</PageLayout>
       </body>
