@@ -6,11 +6,11 @@ export const ServicesSection = () => {
     <section className="grid gap-16 mb-36">
       <h1 className="text-4xl text-center">Services</h1>
       <div className="flex flex-wrap justify-center gap-8">
-        <ServiceIcon src="bortkjøring" />
-        <ServiceIcon src="forsikring" />
-        <ServiceIcon src="trefelling" />
+        <ServiceIcon src="bortkjøring.png" />
+        <ServiceIcon src="forsikring.png" />
+        <ServiceIcon src="trefelling.png" />
         {/* <ServiceIcon src="tilkomstteknikk" /> */}
-        <ServiceIcon src="dead-tree" />
+        <ServiceIcon src="KVS-icon-blue.svg" />
       </div>
     </section>
   );

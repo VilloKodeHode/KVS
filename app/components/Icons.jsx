@@ -6,7 +6,7 @@ export const ServiceIcon = ({ src }) => {
       <Image
         width={100}
         height={100}
-        src={`/images/service-icons/${src}.png`}
+        src={`/images/service-icons/${src}`}
         alt={`${src}-icon`}
         className=" border-black lg:w-[50px] group-hover:scale-110 h-fit opacity-75 duration-200 group-hover:opacity-100 object-fit"
       />
