@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <header className="z-20 h-20 flex items-center justify-between my-8 page-padding">
+    <header className="z-20 h-12 flex items-center justify-between my-8 page-padding">
       <figure>
         <Image
           width={200}
