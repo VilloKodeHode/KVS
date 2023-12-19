@@ -85,6 +85,7 @@ export default function Header({ currentPath }) {
           />
 
           <HamburgerBar
+           handleMenuToggle={handleMenuToggle}
             menuRef={menuRef}
             isOpen={isOpen}
             setIsOpen={setIsOpen}

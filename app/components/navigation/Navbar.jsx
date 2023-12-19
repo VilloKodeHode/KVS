@@ -1,3 +1,4 @@
+import MENU_LIST from "../../data/menu_list";
 import { useState } from "react";
 import NavItem from "./NavItem";
 import { IoCloseSharp } from "react-icons/io5";
@@ -6,7 +7,6 @@ import { IoCloseSharp } from "react-icons/io5";
 export default function Navbar({
   className,
   currentPath,
-  MENU_LIST,
 }) {
 
   return (

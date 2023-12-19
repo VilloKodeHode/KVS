@@ -1,26 +1,18 @@
 // The navigation drawer. Made with Chakra UI.
 
 import MENU_LIST from "../../data/menu_list";
-import NavItem, { DropDown, DropDownItem } from "./NavItem";
+import NavItem from "./NavItem";
 import LogoComponent from "../base components/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function HamburgerBar({
-  language,
-  Theme,
   currentPath,
   setIsOpen,
   isOpen,
-  handleMenuToggle,
   menuRef,
-  drop_down,
-  drop_down_items,
-  toogleDropDown,
-  setToogleDropDown,
+  handleMenuToggle,
 }) {
-  const menuObj = MENU_LIST.find((menu) => menu.language === language);
-  const menu_items = menuObj ? menuObj.menu_items : [];
 
   return (
     <>
@@ -73,7 +65,7 @@ export default function HamburgerBar({
                     handleMenuToggle={handleMenuToggle}
                     currentPath={currentPath}
                   />
-                  {menu_items.map((menu) => (
+                  {MENU_LIST.map((menu) => (
                     <NavItem
                       onClick={() => {
                         setIsOpen(false);
@@ -84,49 +76,12 @@ export default function HamburgerBar({
                       href={menu.href}
                       color={menu.color}
                       icon={menu.icon}
-                      Theme={Theme}
+      
                       currentPath={currentPath}
                     />
                   ))}
-                  <DropDown
-                    onClick={() => setToogleDropDown(!toogleDropDown)}
-                    textSize="text-h4"
-                    Theme={Theme}
-                    language={language}
-                    currentPath={currentPath}
-                    className="-z-50"
-                  >
-                    {drop_down.text}
-                  </DropDown>
-                  <div
-                    className={`absolute ${
-                      toogleDropDown
-                        ? "scale-100 translate-y-[200%] translate-x-1/4"
-                        : "scale-0 translate-x-0 translate-y-[130%]"
-                    }  transition-all`}
-                  >
-                    <div className="flex flex-col justify-center items-start gap-4 min-h-[160px]">
-                      {drop_down_items.map((menu) => (
-                        <DropDownItem
-                          onClick={() => {
-                            setToogleDropDown(false);
-                            setIsOpen(false);
-                          }}
-                          textSize="text-h5"
-                          key={menu.text}
-                          text={menu.text}
-                          href={menu.href}
-                          color={menu.color}
-                          icon={menu.icon}
-                          Theme={Theme}
-                          language={language}
-                          currentPath={currentPath}
-                        />
-                      ))}
-                    </div>
-                  </div>
                 </div>
-                <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex"></div>
+                {/* <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex"></div> */}
               </ul>
             </div>
           </nav>
