@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <section className="z-10 grid lg:grid-rows-none grid-rows-2 min-h-[calc(100vh-102px)] items-center">
       <div className="animate-slideInRight lg:absolute static -left-8 lg:w-[50%]">
-        <div className="z-10 text-center text-[#050a0f] flex flex-col  gap-8 h-fit justify-center rounded-3xl shadow-black shadow bg-KVS-primary bg-opacity-40 p-16">
+        <div className="z-10 text-center text-KVS-white flex flex-col  gap-8 h-fit justify-center rounded-3xl shadow-black shadow bg-KVS-primary bg-opacity-40 p-16">
           {/* <figure className="flex items-center gap-4"> */}
           <h1 className="2xl:text-8xl text-6xl">
             Velkommen til <span className="text-[#bad7f3]">KVS</span>
