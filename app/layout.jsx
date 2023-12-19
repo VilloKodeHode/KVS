@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const figtree = Figtree({ subsets: ["latin"] });
 
 export const Metadata = {
   title: "Create Next App",
@@ -10,15 +11,18 @@ export const Metadata = {
 };
 
 export const PageLayout = ({ children }) => {
-  return <main className="page-padding">{children}</main>;
+  return <main className="page-padding grid gap-32">{children}</main>;
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-x-hidden `}>
+      <body
+        className={`${figtree.className} overflow-x-hidden bg-KVS-primary bg-opacity-75`}
+      >
         <Header />
         <PageLayout>{children}</PageLayout>
+        <Footer />
       </body>
     </html>
   );
