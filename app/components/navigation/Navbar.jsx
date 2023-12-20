@@ -17,12 +17,10 @@ export default function Navbar({
 
           <NavItem
             textSize="text-p"
-            onClick={() => setToogleDropDown(false)}
             key={menu.text}
             text={menu.text}
             href={menu.href}
-            color={menu.color}
-            icon={menu.icon}
+            idRef={menu.idRef}
             currentPath={currentPath}
           />
         ))}

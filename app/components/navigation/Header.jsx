@@ -1,3 +1,5 @@
+"use client"
+
 //Header component
 import { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
@@ -5,6 +7,7 @@ import MENU_LIST from "../../data/menu_list";
 import LogoComponent from "../baseComponents/Logo";
 import { SiGithub, SiInstagram } from "react-icons/si";
 import Image from "next/image";
+import HamburgerBar from "./Hamburgerbar";
 
 export default function Header({ currentPath }) {
   const [notTop, setNotTop] = useState(false);
@@ -42,7 +45,7 @@ export default function Header({ currentPath }) {
   return (
     <>
       <div
-        className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 bg-black text-Villo-dark-white10
+        className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 bg-KVS-black text-KVS-white
         `}
       >
         <div
@@ -65,7 +68,7 @@ export default function Header({ currentPath }) {
       </div>
 
       <header
-        className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] bg-black flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 backdrop-blur-[1px]`}
+        className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
           <div className="grid items-center h-[112px] min-w-[200px] gap-8 rounded-br-full">
@@ -79,7 +82,6 @@ export default function Header({ currentPath }) {
             </div>
           </div>
           <Navbar
-            Theme={Theme}
             currentPath={currentPath}
             MENU_LIST={MENU_LIST}
           />

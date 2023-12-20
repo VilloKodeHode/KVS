@@ -2,7 +2,7 @@
 
 import MENU_LIST from "../../data/menu_list";
 import NavItem from "./NavItem";
-import LogoComponent from "../base components/Logo";
+import LogoComponent from "../baseComponents/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -13,16 +13,11 @@ export default function HamburgerBar({
   menuRef,
   handleMenuToggle,
 }) {
-
   return (
     <>
       <div className="z-[99] flex items-center h-full rounded-bl-full md:hidden">
         <button
-          className={`block ml-8 duration-200 hover:scale-110 ${
-            Theme === "light"
-              ? "text-Villo-light-primary"
-              : "text-Villo-dark-primary"
-          } `}
+          className={`block ml-8 duration-200 hover:scale-110 text-KVS-secondary`}
           onClick={handleMenuToggle}
           aria-label="Åpne navigasjonsmeny"
         >
@@ -36,14 +31,10 @@ export default function HamburgerBar({
           ref={menuRef}
         >
           <nav className={`relative z-10 flex justify-center h-screen `}>
-            <div className={`relative flex justify-center  `}></div>
+            <div className={`relative flex justify-center`}></div>
             <div
               className={`z-50 w-full h-full bg-opacity-[0.99]
-                ${
-                  Theme === "light"
-                    ? "bg-Villo-light-white"
-                    : "bg-Villo-dark-black"
-                }
+                bg-KVS-black
                   `}
             >
               <ul className={`mt-0 p-2`}>
@@ -54,11 +45,10 @@ export default function HamburgerBar({
                     aria-label="Lukke navigasjonsmeny"
                   >
                     <IoCloseSharp
-                      className={` ${isOpen ? "block" : "hidden"} ${
-                        Theme === "light"
-                          ? "text-Villo-light-primary"
-                          : "text-Villo-dark-primary"
-                      } hover:opacity-70 transition duration-500 z-50 w-10 h-10`}
+                      className={` ${
+                        isOpen ? "block" : "hidden"
+                      } text-KVS-primary
+                       hover:opacity-70 transition duration-500 z-50 w-10 h-10`}
                     />
                   </button>
                   <LogoComponent
@@ -74,9 +64,6 @@ export default function HamburgerBar({
                       key={menu.text}
                       text={menu.text}
                       href={menu.href}
-                      color={menu.color}
-                      icon={menu.icon}
-      
                       currentPath={currentPath}
                     />
                   ))}

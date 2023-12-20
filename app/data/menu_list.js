@@ -1,17 +1,16 @@
 // This file contains the menu list for the navigation
 
 export const MENU_LIST = [
+  { text: "Hjem", href: "/" 
+    , idRef:"hjem"},
+  { text: "Om", href: "/om"
+    , idRef:"om"},
   {
-    menu_items: [
-      { text: "Hjem", href: "/" },
-      { text: "Om", href: "/about" },
-      {
-        text: "Portofølje",
-        href: "/portfolio",
-      },
-      { text: "Kontakt", href: "/contact", },
-    ],
+    text: "Tjenester",
+    href: "/tjenester",
+    idRef:"tjenester"
   },
+  { text: "Kontakt", href: "/kontakt", idRef:"kontakt" },
 ];
 
 export const LOGO = [

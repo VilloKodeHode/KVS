@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServicesSection />
+      <ServicesSection id="tjenster" />
     </>
   );
 }
