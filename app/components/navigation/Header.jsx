@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 //Header component
 import { useEffect, useRef, useState } from "react";
@@ -57,9 +57,9 @@ export default function Header({ currentPath }) {
         <a
           href="https://github.com/VilloKodeHode"
           target="_blank"
-          className={`grid transition-all z-40 grid-flow-col gap-12
- 
- ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          className={`grid transition-all z-40 grid-flow-col gap-12 ${
+            notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"
+          }`}
         >
           <SiInstagram
             className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
@@ -81,13 +81,10 @@ export default function Header({ currentPath }) {
               />
             </div>
           </div>
-          <Navbar
-            currentPath={currentPath}
-            MENU_LIST={MENU_LIST}
-          />
+          <Navbar currentPath={currentPath} MENU_LIST={MENU_LIST} />
 
           <HamburgerBar
-           handleMenuToggle={handleMenuToggle}
+            handleMenuToggle={handleMenuToggle}
             menuRef={menuRef}
             isOpen={isOpen}
             setIsOpen={setIsOpen}

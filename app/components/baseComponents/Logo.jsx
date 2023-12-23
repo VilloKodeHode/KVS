@@ -27,10 +27,10 @@ export const SimpleLogoComponent = () => {
     <div>
       <Image
      src="/images/logo/KVS-logo.png"
-       width="200"
-       height="200"
+       width="400"
+       height="400"
        alt="KVS-logo"
-        className="z-50 m-4"
+        className="z-50 m-4 h-[200px]  w-full"
       />
     </div>
   );

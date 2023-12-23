@@ -3,7 +3,7 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
 
-import { Footer } from "./components/Footer";
+import { Footer } from "./components/navigation/Footer";
 import Header from "./components/navigation/Header";
 // import { useRouter } from "next/navigation";
 // import { useEffect } from "react";

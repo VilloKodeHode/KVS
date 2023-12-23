@@ -1,79 +1,53 @@
-//Footer component
+import { ContactIcon } from "../Icons";
+import Image from "next/image";
+import { SimpleLogoComponent } from "../baseComponents/Logo";
+import { SiInstagram, SiPersonio } from "react-icons/si";
+import { FiMail, FiPhone, FiMapPin  } from "react-icons/fi";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
-import Link from "next/link";
-import { FiMail } from "react-icons/fi";
-import { SlSocialLinkedin } from "react-icons/sl";
-import { VscGithubAlt } from "react-icons/vsc";
-import { ResponsiveH5 } from "../Responsive text/ResponsiveText";
-
-export default function Footer({ language, Theme }) {
+export const Footer = () => {
   return (
-    <div className={`relative py-24 sm:px-6 lg:px-12 px-4 ${Theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"}`}>
-
-      <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
-
-        <div className={`flex flex-col gap-2 ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
-          <div className="flex gap-4">
-            <Link className="w-fit" href="/contact">
-              <FiMail className={`w-8 h-8  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
-            </Link>
-
-            <a href="https://github.com/VilloKodeHode" target="_blank">
-              <VscGithubAlt className={`w-8 h-8  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
-              target="_blank"
-            >
-              <SlSocialLinkedin className={`w-8 h-8  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
-            </a>
-
-          </div>
-          <p>Email: Joakim@jvwebconsult.no</p>
-          <p>Phone: +47 932 850 44</p>
-          <p>Address: Brekkelia 62B, 3153 Tolvsrød</p>
+    <>
+    <footer className="bg-KVS-primary page-padding py-8 min-h-[50vh]">
+      <section className="flex lg:flex-row flex-col items-center justify-between">
+        <div className=" flex justify-center flex-col">
+        <ContactIcon text="Vegardkristensen4@gmail.com">
+            <FiMail />
+          </ContactIcon>
+          <ContactIcon text="+47 992 33 904">
+            <FiPhone />
+          </ContactIcon>
+          <ContactIcon text="Ospenbakken 6, 3153 Tønsberg">
+            <FiMapPin />
+          </ContactIcon>
+          <ContactIcon text="KVS instagram">
+            <SiInstagram />
+          </ContactIcon>
+          <ContactIcon text="Polis nummer: 037412836">
+          <AiOutlineSafetyCertificate />
+          </ContactIcon>
+          {/* 
+    
+          <ContactIcon src="instagram" text="KVS Trefelling" />
+          <ContactIcon src="tryg" text="Polisnummer:" /> */}
+     
         </div>
-        {/* Copyright Information */}
-        <div className={`flex items-center text-center ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
-          <h4 className="text-h4">{language === "Norwegian" ? "© 2023 Villo utvikling" : "© 2023 Villo development"}</h4>
-        </div>
-        {/* Privacy Policy and Terms of Service */}
-        {/* <div className={`text-right ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
-            <Link href="/privacy-policy">
-              <p className="">Privacy Policy</p>
-            </Link>
-            <Link href="/terms-of-service">
-              <p>Terms of Service</p>
-            </Link>
-          </div> */}
-      </div>
-    </div>
+        <SimpleLogoComponent/>
+        {/* <figure>
+          <Image
+            width={340}
+            height={256}
+            src="/images/logo/KVS-logo.png"
+            alt="logo"
+            className="h-64"
+          />
+        </figure> */}
+      </section>
+
+    </footer>
+          <section className="grid place-items-center bg-KVS-black h-10">
+            <p className="text-KVS-white">Levert av Villo Utvikling</p>
+          </section>
+          </>
   );
-}
-
-
-
-export const FooterLinks = (Theme) => {
-  return (
-    <div className="flex flex-row">
-      <div className="flex flex-row items-center justify-center m-4">
-        <Link href="/contact">
-          <FiMail className={`w-8 h-8 mr-4  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
-        </Link>
-      </div>
-      <div className="flex flex-row items-center justify-center m-4">
-        <a href="https://github.com/VilloKodeHode" target="_blank">
-          <VscGithubAlt className={`w-8 h-8 mr-4  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
-        </a>
-      </div>
-      <div className="flex flex-row items-center justify-center m-4">
-        <a
-          href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
-          target="_blank"
-        >
-          <SlSocialLinkedin className={`w-8 h-8 mr-4  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
-        </a>
-      </div>
-    </div>
-  )
-}
+};
