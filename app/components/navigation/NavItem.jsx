@@ -9,7 +9,7 @@ const NavItem = ({
   idRef,
 }) => {
   return (
-    <div key={text} className={`relative group z-10 ${className}`}>
+    <div key={text} className={`relative group z-10`}>
       <a
         href={`#${idRef}`}
         className={`${textSize} text-KVS-white z-10`}

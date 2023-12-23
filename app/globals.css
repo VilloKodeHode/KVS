@@ -36,4 +36,8 @@
     @apply px-24;
   }
 }
+.absolute-center {
+  @apply absolute top-1/2 -translate-y-1/2 -z-10 left-1/2 -translate-x-1/2;
+}
+
 /*# sourceMappingURL=globals.css.map */

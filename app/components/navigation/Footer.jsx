@@ -10,9 +10,8 @@ export default function Footer({ language, Theme }) {
   return (
     <div className={`relative py-24 sm:px-6 lg:px-12 px-4 ${Theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"}`}>
 
-      {/* <FooterLinks Theme={Theme} /> */}
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
-        {/* Contact Information */}
+
         <div className={`flex flex-col gap-2 ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
           <div className="flex gap-4">
             <Link className="w-fit" href="/contact">
