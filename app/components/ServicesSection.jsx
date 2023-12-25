@@ -7,7 +7,7 @@ import { FaHelmetSafety } from "react-icons/fa6";
 
 export const ServicesSection = () => {
   return (
-    <section id="tjenster" className="grid gap-16 mb-36">
+    <section id="#tjenester" className="grid gap-16 mb-36">
       <h1 className="text-4xl text-center text-KVS-white">Tjenester</h1>
       <div className="flex flex-wrap justify-center gap-8">
         <ServiceReactIcon

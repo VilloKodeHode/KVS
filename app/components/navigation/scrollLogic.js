@@ -1,7 +1,8 @@
 export const scrollToSection = (event, id) => {
     event.preventDefault();
+    console.log("Scrolling to section:", id);
     const element = document.getElementById(id);
-
+console.log(element)
     if (element) {
         const targetPosition =
             element.getBoundingClientRect().top +

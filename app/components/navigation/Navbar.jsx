@@ -2,7 +2,7 @@ import MENU_LIST from "../../data/menu_list";
 import { useState } from "react";
 import NavItem from "./NavItem";
 import { IoCloseSharp } from "react-icons/io5";
-
+import { scrollToSection } from "./scrollLogic";
 
 export default function Navbar({
   className,
@@ -16,10 +16,10 @@ export default function Navbar({
         {MENU_LIST.map((menu) => (
 
           <NavItem
+          onClick={(event) => scrollToSection(event, menu.idRef)}
             textSize="text-p"
             key={menu.text}
             text={menu.text}
-            href={menu.href}
             idRef={menu.idRef}
             currentPath={currentPath}
           />

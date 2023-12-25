@@ -45,6 +45,7 @@ export default function Header({ currentPath }) {
   return (
     <>
       <div
+      id="#hjem"
         className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 bg-KVS-black text-KVS-white
         `}
       >

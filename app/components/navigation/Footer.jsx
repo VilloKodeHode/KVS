@@ -8,7 +8,7 @@ import { AiOutlineSafetyCertificate } from "react-icons/ai";
 export const Footer = () => {
   return (
     <>
-    <footer className="bg-KVS-primary page-padding py-8 min-h-[50vh]">
+    <footer id="#kontakt" className="bg-KVS-primary page-padding py-8 min-h-[50vh]">
       <section className="flex lg:flex-row flex-col items-center justify-between">
         <div className=" flex justify-center flex-col">
         <ContactIcon text="Vegardkristensen4@gmail.com">

@@ -2,15 +2,15 @@
 
 export const MENU_LIST = [
   { text: "Hjem", href: "/" 
-    , idRef:"hjem"},
+    , idRef:"#hjem"},
   { text: "Om", href: "/om"
-    , idRef:"om"},
+    , idRef:"#om"},
   {
     text: "Tjenester",
     href: "/tjenester",
-    idRef:"tjenester"
+    idRef:"#tjenester"
   },
-  { text: "Kontakt", href: "/kontakt", idRef:"kontakt" },
+  { text: "Kontakt", href: "/kontakt", idRef:"#kontakt" },
 ];
 
 export const LOGO = [

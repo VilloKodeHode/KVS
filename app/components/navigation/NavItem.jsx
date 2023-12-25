@@ -9,9 +9,9 @@ const NavItem = ({
   idRef,
 }) => {
   return (
-    <div key={text} className={`relative group z-10`}>
+    <button key={text} className={`relative group z-10`}>
       <a
-        href={`#${idRef}`}
+        href={`${idRef}`}
         className={`${textSize} text-KVS-white z-10`}
         onClick={onClick}
       >
@@ -29,7 +29,7 @@ const NavItem = ({
           alt="KVS-logo figure"
         />
       </div>
-    </div>
+    </button>
   );
 };
 

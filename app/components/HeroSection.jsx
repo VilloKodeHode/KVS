@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image";
 import { ContactButton } from "./Buttons";
+import { scrollToSection } from "./navigation/scrollLogic";
 
 export const HeroSection = () => {
   return (
@@ -11,6 +14,9 @@ export const HeroSection = () => {
           <h1 className="xl:text-7xl text-5xl text-center">
             Velkommen til <span className="text-[#bad7f3]">KVS</span>
           </h1>
+          {/* <h1 className="xl:text-7xl text-5xl text-center flex justify-center items-center gap-8">
+            Velkommen til <span className="text-[#bad7f3]"><Image className="inline-block" src="/images/logo/KVS.svg" width={100} height={100}></Image></span>
+          </h1> */}
           {/* <Image
             width={200}
             height={200}
