@@ -40,9 +40,17 @@ const config: Config = {
           "0%": { translate: "-100%", opacity: "0%", display: "hidden" },
           "100%": { translate: "-0%", opacity: "100%", display: "block" },
         },
+        slideOutRight: {
+          "0%": { translate: "-0%", opacity: "100%", display: "block" },
+          "100%": { translate: "-100%", opacity: "0%", display: "hidden" },
+        },
         slideInLeft: {
           "0%": { translate: "100%", opacity: "0%", display: "hidden" },
           "100%": { translate: "0%", opacity: "100%", display: "block" },
+        },
+        slideOutLeft: {
+          "0%": { translate: "0%", opacity: "100%", display: "block" },
+          "100%": { translate: "100%", opacity: "0%", display: "hidden" },
         },
         slideUp: {
           "0%": { transform: "translateY(0%)", opacity: "100%" },

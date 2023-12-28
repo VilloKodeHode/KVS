@@ -7,7 +7,7 @@ import { LOGO } from "../../data/menu_list";
 const LogoComponent = ({ onclick }) => {
 
   return (
-    <Link onClick={onclick} key="home" href="/" className="bg-KVS-primary p-2 rounded-b">
+    <Link onClick={onclick} key="home" href="/" className=" p-2 rounded-b">
       <Image
 
         src="/images/logo/KVS-full-logo-alternative.svg"

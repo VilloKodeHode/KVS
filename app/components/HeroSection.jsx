@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { ContactButton } from "./Buttons";
 import { scrollToSection } from "./navigation/scrollLogic";
+import { HeroGallery, HeroImage } from "./baseComponents/HeroImage";
 
 export const HeroSection = () => {
   return (
     <section className="z-10 gap-16 xl:mt-0 mt-16 flex xl:flex-row flex-col justify-between min-h-[calc(100vh-152px)] items-center">
       <div className="animate-slideInRight">
         {/* <div className="absolute-center lg:hidden h-[130%] w-screen shadow-black shadow bg-KVS-primary bg-opacity-40"></div> */}
-        <div className="z-10  text-center p-4 ml:p-8 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center rounded-3xl shadow-black shadow bg-KVS-primary bg-opacity-40">
+        <div className="z-10 text-center p-4 ml:p-8 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center rounded-3xl shadow-black shadow bg-KVS-primary bg-opacity-40">
           {/* <figure className="flex items-center gap-4"> */}
           <h1 className="xl:text-7xl text-5xl text-center">
             Velkommen til <span className="text-[#bad7f3]">KVS</span>
@@ -36,46 +37,7 @@ export const HeroSection = () => {
           <ContactButton />
         </div>
       </div>
-      <div className="animate-slideInLeft">
-        <div className="grid gap-2 bg-KVS-primary md:grid-cols-2 md:grid-rows-2 bg-opacity-40 p-4 ml:p-8 z-10 rounded-3xl shadow shadow-black justify-center items-center">
-        <figure className="h-[300px] w-full">
-          <Image
-            width={800}
-            height={800}
-            src="/images/work/klatre-trekapp.webp"
-            alt="KVS-logo"
-className="rounded-xl border-black w-full h-full opacity-75 duration-200 hover:opacity-100 object-cover"
-          />
-          </figure>
-        <figure className="h-[300px] w-full">
-          <Image
-            width={800}
-            height={800}
-            src="/images/work/klatre-trekapp-to.webp"
-            alt="KVS-logo"
-            className="rounded-xl border-black w-full h-full opacity-75 duration-200 hover:opacity-100 object-cover"
-          />
-          </figure>
-        <figure className="h-[300px] w-full">
-          <Image
-            width={800}
-            height={800}
-            src="/images/work/kran-trekapp.webp"
-            alt="KVS-logo"
-            className="rounded-xl border-black w-full h-full opacity-75 duration-200 hover:opacity-100 object-cover"
-          />
-          </figure>
-        <figure className="h-[300px] w-full">
-          <Image
-            width={800}
-            height={800}
-            src="/images/work/kuttet-ved.webp"
-            alt="KVS-logo"
-            className="rounded-xl border-black w-full h-full opacity-75 duration-200 hover:opacity-100 object-cover"
-          />
-          </figure>
-        </div>
-      </div>
+      <HeroGallery />
     </section>
   );
 };
