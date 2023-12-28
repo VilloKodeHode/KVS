@@ -4,6 +4,8 @@ import { SimpleLogoComponent } from "../baseComponents/Logo";
 import { SiInstagram, SiPersonio } from "react-icons/si";
 import { FiMail, FiPhone, FiMapPin  } from "react-icons/fi";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { GrOrganization } from "react-icons/gr";
+
 
 export const Footer = () => {
   return (
@@ -17,16 +19,16 @@ export const Footer = () => {
           <ContactIcon text="+47 992 33 904">
             <FiPhone />
           </ContactIcon>
-          <ContactIcon text="Ospenbakken 6, 3153 Tønsberg">
+          <ContactIcon text="Ospebakken 6, 3153 Tønsberg">
             <FiMapPin />
           </ContactIcon>
           <ContactIcon text="KVS instagram">
             <SiInstagram />
           </ContactIcon>
           <ContactIcon text="Polis nummer: 037412836">
-          <AiOutlineSafetyCertificate />
+          <GrOrganization />
           </ContactIcon>
-          <ContactIcon text="Org nummer: kommer her">
+          <ContactIcon text="Org nummer: 825 444 572">
           <AiOutlineSafetyCertificate />
           </ContactIcon>
           {/* 

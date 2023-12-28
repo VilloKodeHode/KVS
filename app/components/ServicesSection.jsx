@@ -10,6 +10,14 @@ export const ServicesSection = () => {
     <section id="#tjenester" className="grid gap-16 mb-36">
       <h1 className="text-4xl text-center text-KVS-white">Tjenester</h1>
       <div className="flex flex-wrap justify-center gap-8">
+
+      <ServiceReactIcon
+          text="Jeg trimmer bort greiner eller feller hele trær om det er nødvendig."
+          title="Trefelling"
+        >
+        <GiBirchTrees />
+        </ServiceReactIcon>
+
         <ServiceReactIcon
           title="Ved"
           text="Dersom du ønsker trevirket som ved, kappes det opp til ønsket lengde."
@@ -29,12 +37,6 @@ export const ServicesSection = () => {
           title="Rydding"
         >
         <FaTrailer />
-        </ServiceReactIcon>
-        <ServiceReactIcon
-          text="Jeg trimmer bort greiner eller feller hele trær om det er nødvendig."
-          title="Trefelling"
-        >
-        <GiBirchTrees />
         </ServiceReactIcon>
 
         <ServiceReactIcon

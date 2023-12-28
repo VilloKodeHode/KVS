@@ -18,7 +18,7 @@ export const HeroImage = ({
               height={800}
               src={`/images/work/${src}.webp`}
               alt="KVS-logo"
-              className={`rounded-xl border-black w-full h-full opacity-75 object-[0%_20%] duration-200 object-cover hover:opacity-100 ${imagePosition}`}
+              className={`rounded-xl border-black w-full h-full opacity-75 md:object-[0%_20%] duration-200 object-cover hover:opacity-100 ${imagePosition}`}
             />
          
           </figure>
@@ -26,14 +26,14 @@ export const HeroImage = ({
 
       {src === selectedImage && (
         <div className="absolute-center h-full w-full items-center rounded-3xl bg-KVS-primary bg-opacity-40 flex justify-center">
-          <figure className="w-2/3 h-[110%] z-50">
+          <figure className="w-2/3 h-[105%] z-50">
             <button className="w-full h-full" onClick={closeImage}>
               <Image
                 width={1200}
                 height={1200}
                 src={`/images/work/${src}.webp`}
                 alt="KVS-logo"
-                className={`z-50 rounded-3xl border-black w-full h-full object-cover object-[0%_20%] duration-200 ${imagePosition}`}
+                className={`z-50 rounded-3xl border-black w-full h-full object-cover md:object-[0%_20%] object-center duration-200 ${imagePosition}`}
               />
             </button>
           </figure>
