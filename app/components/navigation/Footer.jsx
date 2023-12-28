@@ -26,6 +26,9 @@ export const Footer = () => {
           <ContactIcon text="Polis nummer: 037412836">
           <AiOutlineSafetyCertificate />
           </ContactIcon>
+          <ContactIcon text="Org nummer: kommer her">
+          <AiOutlineSafetyCertificate />
+          </ContactIcon>
           {/* 
     
           <ContactIcon src="instagram" text="KVS Trefelling" />

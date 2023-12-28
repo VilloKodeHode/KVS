@@ -43,7 +43,7 @@ export const ContactIcon = ({ children, text }) => {
     //TODO Legg til animasjon her: Sirkel som går innover til den blir borte ved hover
   return (
     <div className="flex items-center gap-4">
-      <figure className="flex group rounded-full items-center justify-center lg:h-24 h-16 w-16 lg:w-24">
+      <figure className="flex group rounded-full items-center justify-center py-2 w-16 lg:w-24">
       {React.cloneElement(children,{className:"text-KVS-secondary group-hover:scale-110 h-12 w-12 duration-200 object-fit"})}
       </figure>
       <p className="text-2xl text-KVS-white">{text}</p>
