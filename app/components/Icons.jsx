@@ -44,9 +44,9 @@ export const ContactIcon = ({ children, text }) => {
   return (
     <div className="flex items-center gap-4">
       <figure className="flex group rounded-full items-center justify-center py-2 w-16 lg:w-24">
-      {React.cloneElement(children,{className:"text-KVS-secondary group-hover:scale-110 h-12 w-12 duration-200 object-fit"})}
+      {React.cloneElement(children,{className:"text-KVS-secondary group-hover:scale-110 h-8 w-8 duration-200 object-fit"})}
       </figure>
-      <p className="text-2xl text-KVS-white">{text}</p>
+      <p className="text-xl text-KVS-white">{text}</p>
     </div>
   );
 };
