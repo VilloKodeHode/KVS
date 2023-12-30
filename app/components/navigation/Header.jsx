@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
 import MENU_LIST from "../../data/menu_list";
 import LogoComponent from "../baseComponents/Logo";
-import { SiGithub, SiInstagram } from "react-icons/si";
-import Image from "next/image";
+import {SiInstagram } from "react-icons/si";
 import HamburgerBar from "./Hamburgerbar";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Header({ currentPath }) {
   const [notTop, setNotTop] = useState(false);
@@ -46,15 +46,14 @@ export default function Header({ currentPath }) {
     <>
       <div
       id="#hjem"
-        className={`relative bg-KVS-black transition-colors bg-opacity-[0.93] duration-1000 z-40 h-12 flex items-center justify-between px-12 py-2 text-KVS-white
+        className={`relative bg-KVS-black transition-colors bg-opacity-[0.93] duration-1000 z-40 h-12 gap-4 flex items-center justify-end px-12 py-2 text-KVS-white
         `}
       >
-        <div
-          className={`grid transition-all z-40 grid-flow-col gap-12
- 
-          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
-        ></div>
-
+        <div className="flex items-center gap-2">
+<p className="text-xs">sjekk ut tidligere utførte oppdrag 
+</p>
+<FaArrowRight className="animate-pulse" />
+</div>
         <a
           href="https://www.instagram.com/kvstrefelling/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
           target="_blank"
