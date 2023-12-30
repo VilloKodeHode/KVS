@@ -2,11 +2,8 @@
 
 import { Figtree } from "next/font/google";
 import "./globals.css";
-
 import { Footer } from "./components/navigation/Footer";
 import Header from "./components/navigation/Header";
-// import { useRouter } from "next/navigation";
-// import { useEffect } from "react";
 
 
 const figtree = Figtree({ subsets: ["latin"] });
@@ -21,20 +18,13 @@ export const PageLayout = ({ children }) => {
 };
 
 export default function RootLayout({ children }) {
-//   const router = useRouter();
-// const currentPath = router.asPath;
-
-// useEffect(() => {
-//   console.log(currentPath)
-// }, [currentPath]);
 
   return (
     <html lang="en">
       <body
-        className={`${figtree.className} overflow-x-hidden bg-KVS-primary bg-opacity-75`}
+        className={`${figtree.className} overflow-x-hidden bg-gradient-to-b from-[#5b95ca] to-[#596d80]`}
       >
         <Header 
-        // currentPath={currentPath} 
         />
         <PageLayout>{children}</PageLayout>
         <Footer />
