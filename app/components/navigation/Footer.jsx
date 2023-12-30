@@ -27,7 +27,7 @@ export const Footer = () => {
           <ContactIcon text="KVS instagram">
             <SiInstagram />
           </ContactIcon>
-          <ContactIcon text="Polis nummer: 037412836">
+          <ContactIcon text="Polis nummer: 8154560">
             <GrOrganization />
           </ContactIcon>
           <ContactIcon text="Org nummer: 825 444 572">
