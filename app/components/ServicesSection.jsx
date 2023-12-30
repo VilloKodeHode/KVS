@@ -9,7 +9,7 @@ export const ServicesSection = () => {
   return (
     <section id="#tjenester" className="grid gap-16 mb-36">
       <h1 className="text-4xl text-center text-KVS-white">Tjenester</h1>
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-2">
         <ServiceReactIcon
           text="Jeg trimmer bort greiner eller feller hele trær om det er nødvendig."
           title="Trefelling"
@@ -40,6 +40,7 @@ export const ServicesSection = () => {
 
         <ServiceReactIcon
           text="Forsikring er en selvfølge, derfor er jeg forsikret igjennom Tryg."
+          label="Forsikret i Tryg"
           title="Forsikring"
         >
           <FaHelmetSafety />
@@ -48,6 +49,7 @@ export const ServicesSection = () => {
         <ServiceLocalIcon
           src="KVS-icon-blue.svg"
           text="Jeg utfører flere typer arbeider i tau. Kontakt meg gjerne så finner vi ut av ditt prosjekt."
+          label="Soft-sertifisert"
           title="Tilkomstteknikk"
         />
       </div>
