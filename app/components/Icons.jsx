@@ -58,7 +58,7 @@ export const ContactIcon = ({ children, text }) => {
             "text-KVS-secondary group-hover:scale-110 h-8 w-8 duration-200 object-fit",
         })}
       </figure>
-      <p className="text-xl text-KVS-white">{text}</p>
+      <p className="md:text-xl text-md text-KVS-white">{text}</p>
     </div>
   );
 };

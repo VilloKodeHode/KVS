@@ -5,6 +5,7 @@ import NavItem from "./NavItem";
 import LogoComponent from "../baseComponents/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { scrollToSection } from "./scrollLogic";
 
 export default function HamburgerBar({
   currentPath,
@@ -64,13 +65,14 @@ className={`absolute top-0 z-10 right-0 w-screen h-screen transition-transform d
                   />
                   {MENU_LIST.map((menu) => (
                     <NavItem
-                      onClick={() => {
-                        setIsOpen(false);
-                      }}
+                    onClick={(event) => {
+                      setIsOpen(false);
+                      scrollToSection(event, menu.idRef, "top");
+                    }}
                       textSize="text-h4"
                       key={menu.text}
                       text={menu.text}
-                      href={menu.href}
+                      idRef={menu.idRef}
                       currentPath={currentPath}
                     />
                   ))}

@@ -30,7 +30,7 @@ export const SimpleLogoComponent = () => {
        width="400"
        height="400"
        alt="KVS-logo"
-        className="z-50 m-4 h-[200px] w-full"
+        className={`z-50 m-4 md:h-48 h-24 w-full`}
       />
     </div>
   );
