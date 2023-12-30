@@ -1,4 +1,4 @@
-// The navigation drawer. Made with Chakra UI.
+//TODO fiks overflow!
 
 import MENU_LIST from "../../data/menu_list";
 import NavItem from "./NavItem";
@@ -23,11 +23,18 @@ export default function HamburgerBar({
         >
           <GiHamburgerMenu className={` h-10 w-10 `} />
         </button>
+{/* //TODO overflow er sannsynligvis her: */}
+{/* tidligere className:     
 
+className={`absolute top-0 z-10 right-0 w-screen h-screen transition-transform duration-300 transform ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          } `} 
+          
+          */}
         <div
-          className={`absolute top-0 z-10 right-0 overflow-x-hidden  ${
-            isOpen ? "translate-x-0 w-screen h-screen " : "translate-x-full w-0 h-0"
-          } `}
+ className={`absolute top-0 z-10 right-0 overflow-x-hidden w-screen h-screen transition-transform duration-300 ${
+  isOpen ? "translate-y-0" : "-translate-y-[calc(100%+48px)]"
+} `} 
           ref={menuRef}
         >
           <nav className={`relative z-10 flex justify-center h-screen `}>
