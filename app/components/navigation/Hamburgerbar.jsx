@@ -25,8 +25,8 @@ export default function HamburgerBar({
         </button>
 
         <div
-          className={`absolute top-0 z-10 right-0 w-screen h-screen transition-transform duration-300 transform ${
-            isOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute top-0 z-10 right-0 overflow-x-hidden  ${
+            isOpen ? "translate-x-0 w-screen h-screen " : "translate-x-full w-0 h-0"
           } `}
           ref={menuRef}
         >
@@ -68,7 +68,6 @@ export default function HamburgerBar({
                     />
                   ))}
                 </div>
-                {/* <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex"></div> */}
               </ul>
             </div>
           </nav>

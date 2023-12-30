@@ -46,7 +46,7 @@ export default function Header({ currentPath }) {
     <>
       <div
       id="#hjem"
-        className={`relative bg-KVS-black transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-12 flex items-center justify-between px-12 py-2 text-KVS-white
+        className={`relative bg-KVS-black transition-colors bg-opacity-[0.93] duration-1000 z-40 h-12 flex items-center justify-between px-12 py-2 text-KVS-white
         `}
       >
         <div
@@ -69,7 +69,7 @@ export default function Header({ currentPath }) {
       </div>
 
       <header
-        className={`relative bg-KVS-primary transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 backdrop-blur-[1px]`}
+        className={`relative  bg-KVS-primary transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12`}
       >
         <div className="z-50 flex items-center justify-between">
           <div className="grid items-center h-[112px] min-w-[200px] gap-8">

@@ -15,7 +15,7 @@ export const Metadata = {
 };
 
 export const PageLayout = ({ children }) => {
-  return <main className="page-padding grid gap-32">{children}</main>;
+  return <main className="page-padding grid overflow-x-hidden gap-32">{children}</main>;
 };
 
 export default function RootLayout({ children }) {
