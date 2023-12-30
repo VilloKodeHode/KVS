@@ -9,23 +9,11 @@ export const HeroSection = () => {
   return (
     <section className="z-10 gap-16 xl:mt-0 mt-16 flex xl:flex-row flex-col justify-between min-h-[calc(100vh-152px)] items-center">
       <div className="animate-slideInRight">
-        {/* <div className="absolute-center lg:hidden h-[130%] w-screen shadow-black shadow bg-KVS-primary bg-opacity-40"></div> */}
-        <div className="z-10 text-center p-4 ml:p-8 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center rounded-3xl shadow-black shadow bg-KVS-primary bg-opacity-40">
-          {/* <figure className="flex items-center gap-4"> */}
+        <div className="z-10 text-center p-4 ml:p-8 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center rounded-3xl shadow-KVS-primary shadow bg-KVS-primary bg-opacity-10">
           <h1 className="xl:text-7xl text-5xl text-center">
             Velkommen til <span className="text-[#bad7f3]">KVS</span>
           </h1>
-          {/* <h1 className="xl:text-7xl text-5xl text-center flex justify-center items-center gap-8">
-            Velkommen til <span className="text-[#bad7f3]"><Image className="inline-block" src="/images/logo/KVS.svg" width={100} height={100}></Image></span>
-          </h1> */}
-          {/* <Image
-            width={200}
-            height={200}
-            src="/images/logo/KVS-logo-cutout.png"
-            alt="logo"
-            className="h-fit w-fit object-cover z-10 rounded-md"
-          /> */}
-          {/* </figure> */}
+
           <h2 className="text-2xl lg:text-3xl hidden sm:block">
             Usikker på hva du skal gjøre med treet som skygger for solen?
           </h2>

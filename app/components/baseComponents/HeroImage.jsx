@@ -53,7 +53,7 @@ export const HeroGallery = () => {
   };
   return (
     <div className="animate-slideInLeft z-10 max-w-3xl  w-full">
-      <div className="grid gap-2 relative bg-KVS-primary grid-cols-2 grid-rows-2 bg-opacity-40 p-4 ml:p-8 z-10 rounded-3xl shadow shadow-black justify-center items-center">
+      <div className="grid gap-2 relative bg-KVS-primary grid-cols-2 grid-rows-2 bg-opacity-10 p-4 ml:p-8 z-10 rounded-3xl shadow shadow-KVS-primary justify-center items-center">
         <HeroImage
           openImage={openImage}
           closeImage={closeImage}
