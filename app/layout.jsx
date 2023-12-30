@@ -6,6 +6,7 @@ import { Footer } from "./components/navigation/Footer";
 import Header from "./components/navigation/Header";
 
 
+
 const figtree = Figtree({ subsets: ["latin"] });
 
 export const Metadata = {
@@ -22,12 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${figtree.className} overflow-x-hidden bg-gradient-to-b from-[#5b95ca] to-[#596d80]`}
+        className={`${figtree.className} overflow-x-hidden bg-gradient-to-b from-[#7fb1e0] to-[#34424e]`}
       >
         <Header 
         />
         <PageLayout>{children}</PageLayout>
         <Footer />
+
       </body>
     </html>
   );

@@ -11,11 +11,18 @@ export const ServicesSection = () => {
       <h1 className="text-4xl text-center text-KVS-white">Tjenester</h1>
       <div className="flex flex-wrap justify-center gap-2">
         <ServiceReactIcon
-          text="Jeg trimmer bort greiner eller feller hele trær om det er nødvendig."
+          text="Jeg trimmer bort greiner eller feller hele trær om det er nødvendig. Vanskelige trær seksjonsfelles"
           title="Trefelling"
         >
           <GiBirchTrees />
         </ServiceReactIcon>
+
+        <ServiceLocalIcon
+          src="KVS-icon-blue.svg"
+          text="Jeg utfører flere typer arbeider i tau. Kontakt meg gjerne så finner vi ut av ditt prosjekt."
+          label="Soft-sertifisert"
+          title="Tilkomstteknikk"
+        />
 
         <ServiceReactIcon
           title="Ved"
@@ -46,12 +53,7 @@ export const ServicesSection = () => {
           <FaHelmetSafety />
         </ServiceReactIcon>
 
-        <ServiceLocalIcon
-          src="KVS-icon-blue.svg"
-          text="Jeg utfører flere typer arbeider i tau. Kontakt meg gjerne så finner vi ut av ditt prosjekt."
-          label="Soft-sertifisert"
-          title="Tilkomstteknikk"
-        />
+
       </div>
     </section>
   );
