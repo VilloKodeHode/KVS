@@ -60,6 +60,10 @@ const config: Config = {
           "0%": { transform: "translateY(-100%)", opacity: "0%" },
           "100%": { translate: "translateY(0%)", opacity: "100%" },
         },
+        appear: {
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
+        },
         
       },
       animation: {
@@ -67,6 +71,7 @@ const config: Config = {
         slideInLeft: "slideInLeft 1.5s ease-in-out",
         slideInFromTop: "slideDown 0.5s ease-in-out",
         slideInFromBottom: "slideUp 0.5s ease-in-out forwards",
+        appear: "appear 0.5s ease-in-out",
       },
     },
   },
