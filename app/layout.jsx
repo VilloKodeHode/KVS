@@ -1,23 +1,25 @@
-"use client"
-
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Footer } from "./components/navigation/Footer";
 import Header from "./components/navigation/Header";
-import MetaTags from "./components/utilities/Metatags";
-
 
 
 const figtree = Figtree({ subsets: ["latin"] });
 
-export const Metadata = {
-  title: "KVS trefelling",
-  description: "Kristensen vedlikehold service",
-};
-
 export const PageLayout = ({ children }) => {
   return <main className="page-padding grid overflow-x-hidden gap-32">{children}</main>;
 };
+export const metadata = {
+  title: "KVS trefelling",
+  description: "Kristensen vedlikehold service",
+  keywords: "kristensen, vedlikehold, service, trefelling, Kristensen, Kristensen vedlikehold, Kristensen vedlikehold service",
+  author: "Kristensen vedlikehold service",
+  icons: {
+    icon: "/favicon.png",
+  }
+};
+
+
 
 export default function RootLayout({ children }) {
 

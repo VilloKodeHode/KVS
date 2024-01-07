@@ -68,7 +68,7 @@ export const HeroGallery = () => {
         {imageSet === 1 && (
           <>
             <button
-              className={`absolute border-2 animate-appear rounded-xl ml:-bottom-12 -bottom-14 right-1/3 ${
+              className={`absolute border-2 animate-appear rounded-xl ml:-bottom-12 -bottom-14 lg:bottom-1/2 right-1/3 lg:translate-y-1/2 lg:-right-10 ${
                 selectedImage
                   ? "bg-slate-500 border-slate-600"
                   : "bg-KVS-primary border-KVS-secondary"
@@ -116,7 +116,7 @@ export const HeroGallery = () => {
         {imageSet === 2 && (
           <>
             <button
-              className={`absolute border-2 rounded-xl  animate-appear ml:-bottom-12 -bottom-14 left-1/3 ${
+              className={`absolute border-2 animate-appear rounded-xl ml:-bottom-12 -bottom-14 lg:bottom-1/2 left-1/3 lg:translate-y-1/2 lg:-left-10 ${
                 selectedImage
                   ? "bg-slate-500 border-slate-600"
                   : "bg-KVS-primary border-KVS-secondary"

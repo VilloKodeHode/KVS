@@ -1,10 +1,10 @@
 // This file contains the menu list for the navigation
 
 export const MENU_LIST = [
-  { text: "Hjem", href: "/" 
-    , idRef:"#hjem"},
-  { text: "Om", href: "/om"
-    , idRef:"#om"},
+  // { text: "Hjem", href: "/" 
+  //   , idRef:"#hjem"},
+  // { text: "Om", href: "/om"
+  //   , idRef:"#om"},
   {
     text: "Tjenester",
     href: "/tjenester",
