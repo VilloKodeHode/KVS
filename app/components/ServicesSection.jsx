@@ -9,7 +9,7 @@ export const ServicesSection = () => {
   return (
     <section id="#tjenester" className="grid gap-16 mb-36">
       <h1 className="text-4xl text-center text-KVS-white">Tjenester</h1>
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-32">
         <ServiceReactIcon
           text="Jeg trimmer bort greiner eller feller hele trær om det er nødvendig. Vanskelige trær seksjonsfelles"
           title="Trefelling"
@@ -52,8 +52,6 @@ export const ServicesSection = () => {
         >
           <FaHelmetSafety />
         </ServiceReactIcon>
-
-
       </div>
     </section>
   );
