@@ -2,6 +2,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main-header {
+  @apply xl:text-5xl text-3xl text-center 
+}
+
+// header {
+//   text-transform: uppercase;
+// }
+
+.section-header {
+  @apply xl:text-3xl text-2xl text-center
+}
+
+.sub-header {
+  @apply xl:text-xl text-lg text-center
+}
+
+.large-paragraph {
+  @apply xl:text-lg text-base text-center
+}
+
 .page-padding {
   @apply px-4;
 }
@@ -45,7 +66,7 @@
   }
   
 h1, h2, h3, button, h4, p, li, ul {
-  text-shadow: 0.5px 0.5px 0px  black;
+  // text-shadow: 0.5px 0.5px 0px  black;
 
 }
 

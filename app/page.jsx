@@ -1,11 +1,12 @@
 import { HeroSection } from "./components/HeroSection";
+import { IntroSection } from "./components/IntroSection";
 import { ServicesSection } from "./components/ServicesSection";
 import Image from "next/image";
 export default function Home() {
   return (
     <>
-    
       <HeroSection />
+      <IntroSection />
       <ServicesSection />
       <Image
         src="/images/logo/Logo.svg"
