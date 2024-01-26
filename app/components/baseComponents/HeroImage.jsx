@@ -66,8 +66,8 @@ export const HeroGallery = () => {
     setSelectedImage(null);
   };
   return (
-    <div className="animate-slideInLeft relative min-h-[422px] z-10 max-w-3xl w-full">
-      <div className="backdrop-blur-sm bg-KVS-primary bg-opacity-40 p-4 ml:p-8 z-10 rounded-3xl shadow shadow-KVS-primary">
+    <div className="animate-slideInLeft relative min-h-[528px] z-10 max-w-3xl w-full">
+      <div className="backdrop-blur-sm bg-KVS-primary bg-opacity-40 h-full p-4 ml:p-8 z-10 rounded-3xl shadow shadow-KVS-primary">
         <button
           className={`absolute border-2 animate-appear rounded-xl ml:-bottom-12 -bottom-14 lg:bottom-1/2 right-1/3 lg:translate-y-1/2 lg:-right-10 ${
             selectedImage || imageSet === 4
@@ -88,7 +88,7 @@ export const HeroGallery = () => {
         </button>
         {imageSet === 1 && (
           <>
-            <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
               <HeroImage
                 openImage={openImage}
                 closeImage={closeImage}
@@ -122,7 +122,7 @@ export const HeroGallery = () => {
         )}
         {imageSet === 2 && (
           <>
-            <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
               <HeroImage
                 openImage={openImage}
                 closeImage={closeImage}
@@ -156,7 +156,7 @@ export const HeroGallery = () => {
         )}
         {imageSet === 3 && (
           <>
-            <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
               <HeroImage
                 closeImage={closeImage}
                 selectedImage={selectedImage}
@@ -176,7 +176,7 @@ export const HeroGallery = () => {
         )}
         {imageSet === 4 && (
           <>
-            <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
               <HeroImage
                 closeImage={closeImage}
                 selectedImage={selectedImage}

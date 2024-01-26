@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <section className="z-10 gap-16 xl:mt-0 mt-16 flex xl:flex-row flex-col justify-between min-h-[calc(100vh-112px)] items-center">
       <div className="animate-slideInRight">
-        <div className="z-10 text-center p-4 ml:p-16 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center rounded-3xl shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 backdrop-blur-sm">
+        <div className="z-10 text-center p-4 ml:p-16 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center bg-opacity-40 backdrop-blur-sm">
           <h1 className="main-header">Velkommen til KVS</h1>
 
           <h2 className="large-paragraph hidden sm:block">
