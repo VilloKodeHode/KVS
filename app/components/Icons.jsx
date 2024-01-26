@@ -3,21 +3,23 @@ import React from "react";
 
 export const ServiceLocalIcon = ({ src, text, label, title }) => {
   return (
-    <div className="flex flex-col items-center gap-4 relative p-4 rounded-2xl bg-KVS-primary">
-      <figure className="flex group items-center justify-center bg-KVS-secondary h-24 shadow shadow-black rounded-lg p-4 w-24">
+    <div className="flex flex-col items-center gap-4 relative p-4 rounded-2xl">
+      <figure className="flex group items-center justify-center h-24 shadow rounded-full border-2 border-KVS-secondary p-4 w-24">
         <Image
           width={50}
           height={50}
           src={`/images/service-icons/${src}`}
           alt={`${src}-icon`}
-          className=" border-black group-hover:scale-110 opacity-75 duration-200 group-hover:opacity-100 object-fit"
+          className="group-hover:scale-110 opacity-75 duration-200 group-hover:opacity-100 object-fit"
         />
       </figure>
       <article className=" text-KVS-white grid gap-2 text-center max-w-[240px]">
         <h4 className="text-2xl underline underline-offset-[6px]">{title}</h4>
         <div className="flex flex-col items-center gap-2">
           <p>{text}</p>
-          <p className="bg-KVS-green rounded-2xl px-4 py-2 w-fit text-KVS-secondary">{label}</p>
+          <p className="bg-KVS-primary rounded-2xl px-4 py-2 w-fit text-KVS-secondary">
+            {label}
+          </p>
         </div>
       </article>
     </div>
@@ -27,21 +29,22 @@ export const ServiceLocalIcon = ({ src, text, label, title }) => {
 export const ServiceReactIcon = ({ children, text, label, title }) => {
   //TODO Legg til animasjon her: Sirkel som går innover til den blir borte ved hover
   return (
-    <div className="flex flex-col items-center gap-4 rounded-2xl p-4 bg-KVS-primary">
-      <figure className="flex group items-center justify-center bg-KVS-secondary h-24 shadow shadow-black rounded-lg p-4 w-24">
+    <div className="flex flex-col items-center gap-4 rounded-2xl p-4">
+      <figure className="flex group items-center justify-center h-24 shadow rounded-full border-2 border-KVS-secondary p-4 w-24">
         {React.cloneElement(children, {
           className:
-            "border-black lg:w-[50px] group-hover:scale-110 h-[50px] w-[50px] opacity-75 duration-200 group-hover:opacity-100 object-fit",
+            "group-hover:scale-110 fill-KVS-secondary h-full w-full opacity-75 duration-200 group-hover:opacity-100 object-fit",
         })}
       </figure>
       <article className="text-KVS-white grid gap-2 h-full text-center max-w-[240px]">
-      <h4 className="text-2xl underline underline-offset-[6px]">{title}</h4>
+        <h4 className="text-2xl underline underline-offset-[6px]">{title}</h4>
         <div className="flex flex-col items-center justify-between h-full gap-2">
           <p>{text}</p>
           {label && (
-          <p className="bg-KVS-green rounded-2xl px-4 py-2 w-fit text-KVS-secondary">{label}</p>  
+            <p className="bg-KVS-primary rounded-2xl px-4 py-2 w-fit text-KVS-secondary">
+              {label}
+            </p>
           )}
-          
         </div>
       </article>
     </div>

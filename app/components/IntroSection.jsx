@@ -12,15 +12,15 @@ export const IntroSection = () => {
       </p>
       <h2 className="section-header">Hvorfor velge oss:</h2>
       <div className="flex flex-wrap gap-8 text-center justify-center">
-        <p className="large-paragraph max-w-lg">
+        <p className="large-paragraph max-w-xs">
           Erfarne fagfolk: Vårt team består av erfarne arborister og fagfolk som
           sikrer kvalitet og sikkerhet i alle prosjekter.
         </p>
-        <p className="large-paragraph max-w-lg">
+        <p className="large-paragraph max-w-xs">
           Moderne utstyr: Vi benytter det nyeste innen utstyr og teknologi for å
           utføre oppgavene våre på en effektiv og presis måte.
         </p>
-        <p className="large-paragraph max-w-lg">
+        <p className="large-paragraph max-w-xs">
           Kundetilfredshet: Din tilfredshet er vår prioritet. Vi streber etter å
           levere tjenester som overstiger dine forventninger.
         </p>
