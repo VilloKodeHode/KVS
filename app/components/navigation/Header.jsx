@@ -47,10 +47,16 @@ export default function Header({ currentPath }) {
       {/* <div
         id="#hjem"
         className={`relative bg-KVS-black transition-colors bg-opacity-[0.93] duration-1000 z-40 h-12 gap-4 flex items-center justify-end px-12 py-2 
+      {/* <div
+        id="#hjem"
+        className={`relative bg-KVS-black transition-colors bg-opacity-[0.93] duration-1000 z-40 h-12 gap-4 flex items-center justify-end px-12 py-2 
         `}
+      ></div> */}
       ></div> */}
 
       <header
+        id="#hjem"
+        className={`relative bg-KVS-primary transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12`}
         id="#hjem"
         className={`relative bg-KVS-primary transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12`}
       >
@@ -77,6 +83,22 @@ export default function Header({ currentPath }) {
           />
         </div>
       </header>
+      <div className="flex justify-end text-KVS-white">
+        <a
+          href="https://www.instagram.com/kvstrefelling/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
+          target="_blank"
+          className={`flex transition-all absolute hover:scale-110 origin-right z-40 items-center gap-4 m-4 ${
+            notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"
+          }`}
+        >
+          <p className="">sjekk ut tidligere utførte oppdrag</p>
+          <FaArrowRight className="animate-pulse" />
+
+          <SiInstagram
+            className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
+          />
+        </a>
+      </div>
       <div className="flex justify-end text-KVS-white">
         <a
           href="https://www.instagram.com/kvstrefelling/?igshid=NGVhN2U2NjQ0Yg%3D%3D"

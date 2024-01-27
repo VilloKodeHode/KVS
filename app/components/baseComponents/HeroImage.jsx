@@ -14,6 +14,7 @@ export const HeroImage = ({
     <>
       <button className="-z-30" onClick={() => openImage(src)}>
         <figure className="h-full w-full ">
+     
           <Image
             width={800}
             height={800}
@@ -25,6 +26,12 @@ export const HeroImage = ({
       </button>
 
       {src === selectedImage && (
+        <div className="absolute-center h-[101%] w-[101%] items-center rounded-xl bg-KVS-primary bg-opacity-40 z-10">
+          <button
+            className="w-full h-full flex justify-center"
+            onClick={closeImage}
+          >
+            <figure className="w-[66%] relative h-[105%] z-50">
         <div className="absolute-center h-[101%] w-[101%] items-center rounded-xl bg-KVS-primary bg-opacity-40 z-10">
           <button
             className="w-full h-full flex justify-center"
@@ -50,6 +57,8 @@ export const HeroImage = ({
               )} */}
             </figure>
           </button>
+            </figure>
+          </button>
         </div>
       )}
     </>
@@ -66,8 +75,10 @@ export const HeroGallery = () => {
     setSelectedImage(null);
   };
   return (
+
     <div className="animate-slideInLeft relative min-h-[422px] z-10 max-w-3xl w-full">
       <div className="backdrop-blur-sm bg-KVS-primary bg-opacity-40 p-4 ml:p-8 z-10 rounded-3xl shadow shadow-KVS-primary">
+
         <button
           className={`absolute border-2 animate-appear rounded-xl ml:-bottom-12 -bottom-14 lg:bottom-1/2 right-1/3 lg:translate-y-1/2 lg:-right-10 ${
             selectedImage || imageSet === 4
@@ -88,7 +99,9 @@ export const HeroGallery = () => {
         </button>
         {imageSet === 1 && (
           <>
-            <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">
+
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
+
               <HeroImage
                 openImage={openImage}
                 closeImage={closeImage}
@@ -104,6 +117,7 @@ export const HeroGallery = () => {
                 imagePosition="object-[50%_0%]"
               />
               {/* <HeroImage
+              {/* <HeroImage
                 closeImage={closeImage}
                 selectedImage={selectedImage}
                 openImage={openImage}
@@ -117,12 +131,15 @@ export const HeroGallery = () => {
                 src="kuttet-ved"
                 imagePosition="object-[50%_0%]"
               /> */}
+              /> */}
             </div>
           </>
         )}
         {imageSet === 2 && (
           <>
-            <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">
+
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
+
               <HeroImage
                 openImage={openImage}
                 closeImage={closeImage}
@@ -137,6 +154,26 @@ export const HeroGallery = () => {
                 src="kran-trimming"
                 imagePosition="object-[50%_0%]"
               />
+              {/* <HeroImage
+                closeImage={closeImage}
+                selectedImage={selectedImage}
+                openImage={openImage}
+                src="klatre-henge"
+                imagePosition="object-[25%_0%]"
+              />
+              <HeroImage
+                closeImage={closeImage}
+                selectedImage={selectedImage}
+                openImage={openImage}
+                src="klatre-pose"
+                imagePosition="object-[25%_0%]"
+              /> */}
+            </div>
+          </>
+        )}
+        {imageSet === 3 && (
+          <>
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
               {/* <HeroImage
                 closeImage={closeImage}
                 selectedImage={selectedImage}
@@ -174,6 +211,44 @@ export const HeroGallery = () => {
             </div>
           </>
         )}
+        {imageSet === 4 && (
+          <>
+            <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
+              <HeroImage
+                closeImage={closeImage}
+                selectedImage={selectedImage}
+                openImage={openImage}
+                src="klatre-med-kran"
+                imagePosition="object-[50%_0%]"
+              />
+              <HeroImage
+                closeImage={closeImage}
+                selectedImage={selectedImage}
+                openImage={openImage}
+                src="kuttet-ved"
+                imagePosition="object-[50%_0%]"
+              />
+            </div>
+          </>
+        )}
+        <button
+          className={`absolute border-2 animate-appear rounded-xl ml:-bottom-12 -bottom-14 lg:bottom-1/2 left-1/3 lg:translate-y-1/2 lg:-left-10 ${
+            selectedImage || imageSet === 1
+              ? "bg-slate-500 border-slate-600"
+              : "bg-KVS-primary border-KVS-secondary"
+          }`}
+          onClick={
+            selectedImage || imageSet === 1
+              ? null
+              : () => setImageSet((prev) => prev - 1)
+          }
+        >
+          <IoArrowBack
+            className={`h-14 w-14 z-10  ${
+              selectedImage ? "text-slate-600" : "text-KVS-secondary"
+            }`}
+          />
+        </button>
         {imageSet === 4 && (
           <>
             <div className="grid gap-2 grid-cols-2 relative animate-appear justify-center items-center z-10">

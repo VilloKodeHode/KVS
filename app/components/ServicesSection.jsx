@@ -18,7 +18,7 @@ export const ServicesSection = () => {
         </ServiceReactIcon>
 
         <ServiceLocalIcon
-          src="KVS-icon-blue.svg"
+          src="KVS-mono.svg"
           text="Jeg utfører flere typer arbeider i tau. Kontakt meg gjerne så finner vi ut av ditt prosjekt."
           label="Soft-sertifisert"
           title="Tilkomstteknikk"
