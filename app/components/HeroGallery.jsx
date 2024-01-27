@@ -52,88 +52,13 @@ export const HeroGallery = () => {
               }`}
             />
           </button>
-          {/*TODO Fullfør å legge inn komponenten som er laget under på de andre bildene. Finn ut hvordan å slippe å skrive inn alle proppsa her.... */}
-          <HeroGalleryPage imageSet={imageSet} openImage={openImage} selectedImage={selectedImage} closeImage={closeImage} page={1} imageOne="klatre-høyt" imageTwo="klatre-kuttet-topp" />
-          {/* {imageSet === 1 && (
-            <>
-              <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
-                <HeroImage
-                  openImage={openImage}
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  src="klatre-høyt"
-                  imagePosition="object-[0%_0%]"
-                />
-                <HeroImage
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  openImage={openImage}
-                  src="klatre-kuttet-topp"
-                  imagePosition="object-[50%_0%]"
-                />
-              </div>
-            </>
-          )} */}
-          {imageSet === 2 && (
-            <>
-              <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
-                <HeroImage
-                  openImage={openImage}
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  src="motorsag-i-stubbe"
-                  imagePosition="object-[100%_0%]"
-                />
-                <HeroImage
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  openImage={openImage}
-                  src="kran-trimming"
-                  imagePosition="object-[50%_0%]"
-                />
-              </div>
-            </>
-          )}
-          {imageSet === 3 && (
-            <>
-              <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
-                <HeroImage
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  openImage={openImage}
-                  src="klatre-henge"
-                  imagePosition="object-[25%_0%]"
-                />
-                <HeroImage
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  openImage={openImage}
-                  src="klatre-pose"
-                  imagePosition="object-[25%_0%]"
-                />
-              </div>
-            </>
-          )}
-          {imageSet === 4 && (
-            <>
-              <div className="grid gap-2 grid-cols-2 h-full relative animate-appear justify-center items-center z-10">
-                <HeroImage
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  openImage={openImage}
-                  src="klatre-med-kran"
-                  imagePosition="object-[50%_0%]"
-                />
-                <HeroImage
-                  closeImage={closeImage}
-                  selectedImage={selectedImage}
-                  openImage={openImage}
-                  src="kuttet-ved"
-                  imagePosition="object-[50%_0%]"
-                />
-              </div>
-            </>
-          )}
+          <HeroGalleryPage  imageSet={imageSet} openImage={openImage} selectedImage={selectedImage} closeImage={closeImage} page={1} imageOne="klatre-høyt" imageTwo="klatre-kuttet-topp" />
+
+          <HeroGalleryPage imageSet={imageSet} openImage={openImage} selectedImage={selectedImage} closeImage={closeImage} page={2} imageOne="motorsag-i-stubbe" imageTwo="kran-trimming" />
+
+          <HeroGalleryPage imageSet={imageSet} openImage={openImage} selectedImage={selectedImage} closeImage={closeImage} page={3} imageOne="klatre-henge" imageTwo="klatre-pose" />
+
+          <HeroGalleryPage imageSet={imageSet} openImage={openImage} selectedImage={selectedImage} closeImage={closeImage} page={4} imageOne="klatre-med-kran" imageTwo="kuttet-ved" />
  
         </div>
       </div>
