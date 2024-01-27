@@ -19,34 +19,34 @@ export const ServicesSection = () => {
 
         <ServiceLocalIcon
           src="KVS-mono.svg"
-          text="Jeg utfører flere typer arbeider i tau. Kontakt meg gjerne så finner vi ut av ditt prosjekt."
+          text="Jeg utfører flere typer arbeider i tau. Kontakt meg gjerne så finner vi ut av ditt prosjekt"
           label="Soft-sertifisert"
           title="Tilkomstteknikk"
         />
 
         <ServiceReactIcon
           title="Ved"
-          text="Dersom du ønsker trevirket som ved, kappes det opp til ønsket lengde."
+          text="Dersom du ønsker trevirket som ved, kappes det opp til ønsket lengde"
         >
           <GiWoodPile />
         </ServiceReactIcon>
 
         <ServiceReactIcon
           title="Stubbefresing"
-          text="Jeg freser gjerne bort stubber etter felling, kan også komme på befaring for tidligere."
+          text="Jeg freser gjerne bort stubber etter felling, kan også komme på befaring for tidligere"
         >
           <GiAxeInStump />
         </ServiceReactIcon>
 
         <ServiceReactIcon
-          text="Bortkjøring og opprydding gjennomføres også dersom ønskelig."
+          text="Bortkjøring og opprydding gjennomføres også dersom ønskelig"
           title="Rydding"
         >
           <FaTrailer />
         </ServiceReactIcon>
 
         <ServiceReactIcon
-          text="Forsikring er en selvfølge, derfor er jeg forsikret igjennom Tryg."
+          text="Forsikring er en selvfølge, derfor er jeg forsikret igjennom Tryg"
           label="Forsikret i Tryg"
           title="Forsikring"
         >

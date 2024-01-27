@@ -23,6 +23,8 @@ const config: Config = {
 
         xl: "1280px",
 
+        xxl: "1440px",
+
         "2xl": "1536px",
       },
       colors: {

@@ -14,7 +14,8 @@ export const Footer = () => {
         className="bg-KVS-primary flex lg:flex-row flex-col justify-between w-full gap-8 items-center page-padding py-8 min-h-[50vh]"
       >
         {/* <section className="flex lg:flex-row flex-col items-center place-content-between"> */}
-        <div className=" flex justify-center flex-col">
+        <div className=" flex justify-center flex-col sm:flex-row lg:flex-col xl:flex-row">
+          <div>
           <ContactIcon text="Vegardkristensen4@gmail.com">
             <FiMail />
           </ContactIcon>
@@ -24,6 +25,8 @@ export const Footer = () => {
           <ContactIcon text="Ospebakken 6, 3153 Tønsberg">
             <FiMapPin />
           </ContactIcon>
+          </div>
+          <div>
           <ContactIcon text="KVS instagram">
             <SiInstagram />
           </ContactIcon>
@@ -33,6 +36,7 @@ export const Footer = () => {
           <ContactIcon text="Org nummer: 825 444 572">
             <AiOutlineSafetyCertificate />
           </ContactIcon>
+          </div>
         </div>
 
         {/* </section> */}

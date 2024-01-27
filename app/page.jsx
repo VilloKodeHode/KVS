@@ -9,11 +9,11 @@ export default function Home() {
       <IntroSection />
       <ServicesSection />
       <Image
-        src="/images/logo/Logo.svg"
+        src="/images/logo/Logo-bg.svg"
         width="200"
         height="200"
         alt="KVS-logo"
-        className="h-[600px] fixed -z-10 w-full opacity-20 hover:scale-105 "
+        className="h-[125%] fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
       />
     </>
   );
