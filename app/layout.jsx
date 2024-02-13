@@ -14,11 +14,21 @@ export const PageLayout = ({ children }) => {
   );
 };
 export const metadata = {
-  title: "KVS trefelling",
-  description: "Kristensen vedlikehold service",
+  title: "KVS Trefelling - Kristensen Vedlikehold Service",
+  description:
+    "Spesialist på trefelling og vedlikeholdstjenester. Velg Kristensen Vedlikehold Service for pålitelige og profesjonelle treetjenester.",
   keywords:
-    "kristensen, vedlikehold, service, trefelling, Kristensen, Kristensen vedlikehold, Kristensen vedlikehold service",
-  author: "Kristensen vedlikehold service",
+    "trefelling, vedlikehold, Kristensen Vedlikehold Service, treetjenester, profesjonelle treetjenester",
+  author: "Joakim Villo - Villo Utvikling",
+  openGraph: {
+    type: "website",
+    url: "https://www.kvstrefelling.no/",
+    title: "KVS Trefelling - Kristensen Vedlikehold Service",
+    description:
+      "Spesialister på trefelling og vedlikeholdstjenester. Velg Kristensen Vedlikehold Service for pålitelige og profesjonelle treetjenester.",
+    image:
+      "https://www.kvstrefelling.no/images/logo/KVS-full-logo-alternative.svg",
+  },
   icons: {
     icon: "/favicon.png",
   },
