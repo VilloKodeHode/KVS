@@ -4,7 +4,8 @@ import React from "react";
 export const ServiceLocalIcon = ({ src, text, label, title }) => {
   return (
     <div className="flex flex-col items-center gap-4 relative p-4 rounded-2xl">
-      <figure className="flex group items-center justify-center h-24 shadow rounded-full border-2 border-KVS-secondary p-4 w-24">
+      <figure className="flex relative group items-center justify-center h-24 shadow rounded-full border-2 border-KVS-secondary p-4 w-24">
+        <div className="absolute-center group-hover:scale-100 transition duration-500 rounded-full border-2 border-KVS-secondary h-full scale-0 w-full" />
         <Image
           width={50}
           height={50}
@@ -30,7 +31,8 @@ export const ServiceReactIcon = ({ children, text, label, title }) => {
   //TODO Legg til animasjon her: Sirkel som går innover til den blir borte ved hover
   return (
     <div className="flex flex-col items-center gap-4 rounded-2xl p-4">
-      <figure className="flex group items-center justify-center h-24 shadow rounded-full border-2 border-KVS-secondary p-4 w-24">
+      <figure className="flex group relative group items-center justify-center h-24 shadow rounded-full border-2 border-KVS-secondary p-4 w-24">
+        <div className="absolute-center group-hover:scale-100 transition duration-500 rounded-full border-2 border-KVS-secondary h-full scale-0 w-full" />
         {React.cloneElement(children, {
           className:
             "group-hover:scale-110 fill-KVS-secondary h-full w-full opacity-75 duration-200 group-hover:opacity-100 object-fit",

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      {/* <IntroSection /> */}
+      <IntroSection />
       <ServicesSection />
       <Image
         src="/images/logo/Logo-bg.svg"

@@ -36,4 +36,19 @@ export const SimpleLogoComponent = () => {
   );
 };
 
+
+export const SimpleLogoOnlyTextComponent = () => {
+  return (
+    <div className="flex justify-center">
+      <Image
+        src="/images/logo/Logo.svg"
+        width="400"
+        height="400"
+        alt="KVS-logo"
+        className={`z-50 m-4 md:h-40 h-24 w-full`}
+      />
+    </div>
+  );
+};
+
 export default LogoComponent;

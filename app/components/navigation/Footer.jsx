@@ -5,6 +5,7 @@ import { SiInstagram, SiPersonio } from "react-icons/si";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { GrOrganization } from "react-icons/gr";
+import { FaHelmetSafety } from "react-icons/fa6";
 
 export const Footer = () => {
   return (
@@ -16,26 +17,31 @@ export const Footer = () => {
         {/* <section className="flex lg:flex-row flex-col items-center place-content-between"> */}
         <div className=" flex justify-center flex-col sm:flex-row lg:flex-col xl:flex-row">
           <div>
-          <ContactIcon text="Vegardkristensen4@gmail.com">
-            <FiMail />
-          </ContactIcon>
-          <ContactIcon text="+47 992 33 904">
-            <FiPhone />
-          </ContactIcon>
-          <ContactIcon text="Ospebakken 6, 3153 Tønsberg">
-            <FiMapPin />
-          </ContactIcon>
+            <a
+              className="hover:underline text-KVS-white"
+              href="mailto:Vegardkristensen4@gmail.com?subject=Kundehendvendelse"
+            >
+              <ContactIcon text="Vegardkristensen4@gmail.com">
+                <FiMail />
+              </ContactIcon>
+            </a>
+            <ContactIcon text="+47 992 33 904">
+              <FiPhone />
+            </ContactIcon>
+            <ContactIcon text="Ospebakken 6, 3153 Tønsberg">
+              <FiMapPin />
+            </ContactIcon>
           </div>
           <div>
-          <ContactIcon text="KVS instagram">
-            <SiInstagram />
-          </ContactIcon>
-          <ContactIcon text="Polis nummer: 8154560">
-            <GrOrganization />
-          </ContactIcon>
-          <ContactIcon text="Org nummer: 825 444 572">
-            <AiOutlineSafetyCertificate />
-          </ContactIcon>
+            <ContactIcon text="KVS instagram">
+              <SiInstagram />
+            </ContactIcon>
+            <ContactIcon text="Forsikret i: Tryg forsikring">
+              <FaHelmetSafety />
+            </ContactIcon>
+            <ContactIcon text="Org nummer: 825 444 572">
+              <AiOutlineSafetyCertificate />
+            </ContactIcon>
           </div>
         </div>
 
