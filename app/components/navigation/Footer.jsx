@@ -33,9 +33,11 @@ export const Footer = () => {
             </ContactIcon>
           </div>
           <div>
+          <a className="h-full hover:underline text-KVS-white w-full" href="https://www.instagram.com/kvstrefelling">
             <ContactIcon text="KVS instagram">
               <SiInstagram />
             </ContactIcon>
+            </a>
             <ContactIcon text="Forsikret i: Tryg forsikring">
               <FaHelmetSafety />
             </ContactIcon>
