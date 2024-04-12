@@ -14,11 +14,11 @@ export const PageLayout = ({ children }) => {
   );
 };
 export const metadata = {
-  title: "KVS Trefelling - Kristensen Vedlikehold Service",
+  title: "Ekspert på trefelling - Kristensen Vedlikehold Service",
   description:
     "Spesialist på trefelling og vedlikeholdstjenester. Velg Kristensen Vedlikehold Service for pålitelige og profesjonelle treetjenester.",
   keywords:
-    "trefelling, vedlikehold, Kristensen Vedlikehold Service, treetjenester, profesjonelle treetjenester",
+    "trefelling, trefelling Tønsberg, trefelling Nøtterøy, trefelling Tjøme, trefelling Vestfold, stubbefres Tønsberg, stubbefres Tjøme, stubbefres Nøtterøy, stubbefres Vestfold, vedlikehold, Kristensen Vedlikehold Service, treetjenester, profesjonelle treetjenester, Tønsberg, Tjøme, Nøtterøy, tilkomstteknikk, vedlikeholdstjenester, vedlikeholdstjeneste, vedlikeholdstjeneste Tønsberg, vedlikeholdstjeneste Tjøme, vedlikeholdstjeneste Nøtterøy, vedlikeholdstjeneste Vestfold, vedlikeholdstjenester Tønsberg, vedlikeholdstjenester Tjøme, vedlikeholdstjenester Nøtterøy, vedlikeholdstjenester Vestfold", 
   author: "Joakim Villo - Villo Utvikling",
   openGraph: {
     type: "website",
