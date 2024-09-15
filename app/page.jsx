@@ -9,9 +9,14 @@ export default async function Home() {
 
 
 const instaImages = await fetchInsta()
-const check = await fetchInsta().then(images => console.log(images))
+// const check = await fetchInsta().then(images => console.log(images))
 // const { blogPosts, sponsors } = await getContent()
+//TODO: Add contact form, intro video?,
 
+/*TODO
+Evt at det hadde gått an at bildene fra insta ruller over siden et eller annet sted- 
+for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye greier da 🙂
+*/
   return (
     
     <>
