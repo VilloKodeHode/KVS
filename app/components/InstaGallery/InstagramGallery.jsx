@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const InstagramGallery = ({ instaImages }) => {
+export const InstagramGallery = async ({ instaImages }) => {
   return (
     <section className="flex flex-col justify-center items-center gap-12 w-full py-16 mb-36 relative">
       <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
