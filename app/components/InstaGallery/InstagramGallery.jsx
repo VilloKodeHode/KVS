@@ -19,9 +19,7 @@ export const InstagramGallery = async ({ instaImages }) => {
                 alt={image.caption}
               />
             ) : (
-              <Image
-              width={300}
-              height={300}
+              <img
                 className="w-full h-full object-cover"
                 src={image.media_url}
                 alt={image.caption}
