@@ -5,7 +5,7 @@ import { HeroGallery } from "./HeroGallery";
 
 export const HeroSection = ({ firstFourImages, latestVideo }) => {
   return (
-    <section className="z-10 gap-16 relative flex flex-col justify-center min-h-[calc(100dvh-112px)] items-center">
+    <section className="z-10 gap-16 flex flex-col justify-center min-h-[calc(100dvh-112px)] items-center">
       <div className="animate-slideInRight">
         <div className="z-10 text-center p-4 ml:p-16 text-shadow text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center">
           <h1 className="main-header">Velkommen til KVS</h1>
@@ -25,7 +25,7 @@ export const HeroSection = ({ firstFourImages, latestVideo }) => {
         </div>
       </div>
 
-      <div className="heroImages h-full absolute group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden w-screen right-1/2 -z-10 translate-x-1/2 opacity-50">
+      <div className="heroImages h-[100dvh] absolute top-0 group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden w-screen right-1/2 -z-10 translate-x-1/2 opacity-50">
         {firstFourImages.map((image) => (
         <div className={``} key={image.id}>
             <img
