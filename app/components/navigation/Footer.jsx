@@ -11,8 +11,8 @@ export const Footer = () => {
   return (
     <>
       <footer
-        id="#kontakt"
-        className="bg-KVS-primary flex lg:flex-row flex-col justify-between w-full gap-8 items-center page-padding py-8 min-h-[50vh]"
+  
+        className="bg-KVS-primary flex mt-36 lg:flex-row flex-col justify-between w-full gap-8 items-center page-padding py-8 min-h-[50vh]"
       >
         {/* <section className="flex lg:flex-row flex-col items-center place-content-between"> */}
         <div className=" flex justify-center flex-col sm:flex-row lg:flex-col xl:flex-row">

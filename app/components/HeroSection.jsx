@@ -1,13 +1,13 @@
 "use client";
+import Image from "next/image";
 import { ContactButton } from "./Buttons";
 import { HeroGallery } from "./HeroGallery";
 
-
-export const HeroSection = () => {
+export const HeroSection = ({ firstFourImages, latestVideo }) => {
   return (
-    <section className="z-10 gap-16 xl:mt-0 mt-16 flex xl:flex-row flex-col ml:justify-between min-h-[calc(100vh-112px)] items-center">
+    <section className="z-10 gap-16 relative flex flex-col justify-center min-h-[calc(100dvh-112px)] items-center">
       <div className="animate-slideInRight">
-        <div className="z-10 text-center p-4 ml:p-16 text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center bg-opacity-40 backdrop-blur-sm">
+        <div className="z-10 text-center p-4 ml:p-16 text-shadow text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center">
           <h1 className="main-header">Velkommen til KVS</h1>
 
           <h2 className="large-paragraph hidden sm:block">
@@ -24,7 +24,22 @@ export const HeroSection = () => {
           <ContactButton />
         </div>
       </div>
-      <HeroGallery />
+
+      <div className="heroImages h-full absolute group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden w-screen right-1/2 -z-10 translate-x-1/2 opacity-50">
+        {firstFourImages.map((image) => (
+        <div className={``} key={image.id}>
+            <img
+              className="w-full h-full object-cover"
+              src={image.media_url}
+              alt={image.caption}
+            />
+        </div>
+      ))}
+      </div>
+
+  
+
+      {/* <HeroGallery /> */}
     </section>
   );
 };

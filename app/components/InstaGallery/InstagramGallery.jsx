@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-export const InstagramGallery = async ({ instaImages }) => {
-  const latestVideo = instaImages.data.find(
-    (image) => image.media_type === "VIDEO"
-  );
-  const allImages = instaImages.data.filter(
-    (image) => image.media_type !== "VIDEO"
-  );
-  const firstThreeImages = allImages.slice(0, 3);
+export const InstagramGallery = async ({ latestVideo, firstFourImages }) => {
+  // const latestVideo = instaImages.data.find(
+  //   (image) => image.media_type === "VIDEO"
+  // );
+  // const allImages = instaImages.data.filter(
+  //   (image) => image.media_type !== "VIDEO"
+  // );
+  // const firstThreeImages = allImages.slice(0, 3);
 
   return (
-    <section className="flex flex-col justify-center items-center gap-12 w-full py-16 mb-36 relative">
+    <section className="flex flex-col justify-center items-center gap-12 w-full py-16 relative">
       <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
       <h1 className="section-header text-KVS-white">Galleri</h1>
       <div className="w-full gap-4 min-h-screen justify-center items-center flex flex-wrap">
@@ -38,7 +38,7 @@ export const InstagramGallery = async ({ instaImages }) => {
           </div>
         </div>
 
-        {firstThreeImages.map((image) => (
+        {firstFourImages.map((image) => (
           <div
             className="h-[400px] rounded-xl hover:outline hover:outline-2 hover:outline-KVS-secondary group overflow-hidden relative w-[300px]"
             key={image.id}

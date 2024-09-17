@@ -5,14 +5,29 @@ import { ServicesSection } from "./components/ServicesSection";
 import Image from "next/image";
 import { fetchInsta } from "./lib/instaFetch";
 import { InstagramGallery } from "./components/InstaGallery/InstagramGallery";
+import { ContactSection } from "./components/ContactSection";
 export default async function Home() {
 
 
 const instaImages = await fetchInsta()
+const latestVideo = instaImages.data.find(
+  (image) => image.media_type === "VIDEO"
+);
+const allImages = instaImages.data.filter(
+  (image) => image.media_type !== "VIDEO"
+);
+const firstFourImages = allImages.slice(0, 4);
+
 // const check = await fetchInsta().then(images => console.log(images))
 // const { blogPosts, sponsors } = await getContent()
-//TODO: Add contact form, intro video?,
 
+/* //TODO: 
+- contact form 
+- intro video?
+- oppdatert hero seksjon med insta bilder som bakgrunn
+- Fjerne gamle galleri i hero seksjonen
+
+*/
 /*TODO
 Evt at det hadde gått an at bildene fra insta ruller over siden et eller annet sted- 
 for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye greier da 🙂
@@ -20,10 +35,11 @@ for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye gre
   return (
     
     <>
-      <HeroSection />
-      <IntroSection />
+      <HeroSection latestVideo={latestVideo} firstFourImages={firstFourImages} />
+      <IntroSection latestVideo={latestVideo} />
       <ServicesSection />
-      <InstagramGallery instaImages={instaImages} />
+      <ContactSection/>
+      {/* <InstagramGallery latestVideo={latestVideo} firstFourImages={firstFourImages} /> */}
       <Image
         src="/images/logo/Logo-bg.svg"
         width="200"

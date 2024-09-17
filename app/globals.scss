@@ -23,6 +23,9 @@
   @apply xl:text-lg text-base text-center
 }
 
+.heroImages>:nth-child(2), .heroImages>:nth-child(3), .heroImages>:nth-child(4) {
+  @apply hidden
+}
 .page-padding {
   @apply px-4;
 }
@@ -35,15 +38,24 @@
   .page-padding {
     @apply px-10;
   }
+  .heroImages>:nth-child(2) {
+    @apply block
+  }
 }
 @media (min-width: 768px) {
   .page-padding {
     @apply px-12;
   }
+  .heroImages>:nth-child(3) {
+    @apply block
+  }
 }
 @media (min-width: 1024px) {
   .page-padding {
     @apply px-16;
+  }
+  .heroImages>:nth-child(4) {
+    @apply block
   }
 }
 @media (min-width: 1280px) {
@@ -56,6 +68,8 @@
     @apply px-24;
   }
 }
+
+
 
 .absolute-center {
 @apply absolute top-1/2 -translate-y-1/2 -z-10 left-1/2 -translate-x-1/2
@@ -70,8 +84,9 @@ h1, h2, h3, button, h4, p, li, ul {
 
 }
 
-
-
+.text-shadow {
+  text-shadow: 1px 1px 0px #000000;
+}
 
 
 
