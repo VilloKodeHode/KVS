@@ -25,7 +25,7 @@ export const HeroImage = ({
       </button>
 
       {src === selectedImage && (
-        <div className="absolute-center ml:h-full h-[1000vh] w-screen ml:w-[100.2%] items-center rounded-xl bg-KVS-primary bg-opacity-40 z-10">
+        <div className="absolute-center ml:h-full h-[100vh] w-screen ml:w-[100.2%] items-center rounded-xl bg-KVS-primary bg-opacity-40 z-10">
           <button
             className="w-full h-full flex justify-center"
             onClick={closeImage}
