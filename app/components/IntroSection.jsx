@@ -3,7 +3,7 @@ import {
   SimpleLogoOnlyTextComponent,
 } from "./baseComponents/Logo";
 
-export const IntroSection = ({ latestVideo }) => {
+export const IntroSection = async ({ latestVideo }) => {
   return (
     <section className="grid lg:grid-cols-2 lg:grid-row-1 grid-row-2 gap-16 text-KVS-white items-center justify-center relative backdrop-blur-sm py-16">
       <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
@@ -15,9 +15,10 @@ export const IntroSection = ({ latestVideo }) => {
         <div className="flex flex-col gap-8 text-center justify-center">
           <p className="large-paragraph max-w-3xl">
             Jeg er sertifisert tilkomsttekniker og har lang erfaring med
-            taubasert metode offshore. Effektivt når det er begrenset med plass, men også for å unngå skade
-            på nærliggende områder. Står treet vanskelig til benyttes seksjonsfelling som metode- treet
-            kuttes i mindre deler for en kontrollert og trygg nedfelling.
+            taubasert metode offshore. Effektivt når det er begrenset med plass,
+            men også for å unngå skade på nærliggende områder. Står treet
+            vanskelig til benyttes seksjonsfelling som metode- treet kuttes i
+            mindre deler for en kontrollert og trygg nedfelling.
           </p>
           <p className="large-paragraph max-w-3xl">
             Ring meg for en hyggelig prat om ditt prosjekt - Vegard Kristensen!
@@ -29,7 +30,7 @@ export const IntroSection = ({ latestVideo }) => {
           loop
           muted
           autoPlay
-          className="w-full max-h-[500px]"
+          className="w-full max-h-[500px] object-cover"
           src={latestVideo.media_url}
           alt={latestVideo.caption}
         />

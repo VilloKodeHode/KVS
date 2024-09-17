@@ -10,14 +10,23 @@ export default async function Home() {
 
 
 const instaImages = await fetchInsta()
+
+// const consoleLogImages = await fetchInsta().then(images => console.log(images))
+
 const latestVideo = instaImages.data.find(
   (image) => image.media_type === "VIDEO"
 );
+// const allVideos = instaImages.data.filter(
+//   (image) => image.media_type === "VIDEO"
+// );
+
+// const secondVideo = allVideos[1];
+
 const allImages = instaImages.data.filter(
   (image) => image.media_type !== "VIDEO"
 );
 const firstFourImages = allImages.slice(0, 4);
-
+const firstImage = allImages.slice(0, 1);
 // const check = await fetchInsta().then(images => console.log(images))
 // const { blogPosts, sponsors } = await getContent()
 
@@ -26,6 +35,7 @@ const firstFourImages = allImages.slice(0, 4);
 - intro video?
 - oppdatert hero seksjon med insta bilder som bakgrunn
 - Fjerne gamle galleri i hero seksjonen
+- på mobile: bakgrunnsbilde (bjørka) justeres når man scroller. FIKS!
 
 */
 /*TODO
@@ -45,7 +55,7 @@ for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye gre
         width="200"
         height="200"
         alt="KVS-logo"
-        className="h-[125%] fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
+        className="h-[125dvh] fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
       />
     </>
   );
