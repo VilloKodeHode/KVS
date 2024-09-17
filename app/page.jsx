@@ -55,7 +55,7 @@ for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye gre
         width="200"
         height="200"
         alt="KVS-logo"
-        className="h-[125dvh] fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
+        className="bg-logo h-[125dvh] fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
       />
     </>
   );

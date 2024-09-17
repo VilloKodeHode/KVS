@@ -25,7 +25,7 @@ export const HeroSection = ({ firstFourImages, latestVideo }) => {
         </div>
       </div>
 
-      <div className="heroImages h-[100dvh] absolute top-0 group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden w-screen right-1/2 -z-10 translate-x-1/2 opacity-50">
+      <div className="heroImages h-dvh absolute top-0 group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden w-screen right-1/2 -z-10 translate-x-1/2 opacity-50">
         {firstFourImages.map((image) => (
         <div className={``} key={image.id}>
             <img
