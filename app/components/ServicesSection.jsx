@@ -33,7 +33,7 @@ export const ServicesSection = () => {
 
         <ServiceReactIcon
           title="Stubbefresing"
-          text="Jeg freser gjerne bort stubber etter felling, kan også komme på befaring for tidligere"
+          text="Jeg freser gjerne bort stubber etter felling, kan også komme på befaring for tidligere felte stubber"
         >
           <GiAxeInStump />
         </ServiceReactIcon>
