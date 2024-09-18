@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   SimpleLogoComponent,
   SimpleLogoOnlyTextComponent,
@@ -25,7 +26,14 @@ export const IntroSection = async ({ latestVideo }) => {
           </p>
         </div>
       </article>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center relative">
+        <Image
+          src="/images/contact-icons/instagram.png"
+          width={30}
+          height={30}
+          alt="Instagram logo"
+          className="absolute top-2 right-2 hover:scale-110 transition duration-300"
+        />
         <video
           loop
           muted
