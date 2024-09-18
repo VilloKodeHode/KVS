@@ -38,10 +38,7 @@ const firstImage = allImages.slice(0, 1);
 - på mobile: bakgrunnsbilde (bjørka) justeres når man scroller. FIKS!
 
 */
-/*TODO
-Evt at det hadde gått an at bildene fra insta ruller over siden et eller annet sted- 
-for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye greier da 🙂
-*/
+
   return (
     
     <>
@@ -55,7 +52,7 @@ for da vil de nyeste bildene han legger ut dukke opp. Hvis det ikke blir mye gre
         width="200"
         height="200"
         alt="KVS-logo"
-        className="bg-logo h-[125vh] fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
+        className="bg-logo h-[125vh] left-0 fixed -top-1/4 -z-10 w-full opacity-20 hover:scale-105 "
       />
     </>
   );
