@@ -17,8 +17,10 @@ export const metadata = {
   title: "Ekspert på trefelling - Kristensen Vedlikehold Service",
   description:
     "Spesialist på trefelling og vedlikeholdstjenester. Velg Kristensen Vedlikehold Service for pålitelige og profesjonelle treetjenester.",
+  // keywords:
+  //   "trefelling, trefelling Tønsberg, trefelling Nøtterøy, trefelling Tjøme, trefelling Vestfold, trefelling Holmestrand, trefelling Sande, trefelling Drammen, stubbefres Tønsberg, stubbefres Tjøme, stubbefres Nøtterøy, stubbefres Vestfold, stubbefres Holmestrand, stubbefres Sande, stubbefres Drammen, vedlikehold, Kristensen Vedlikehold Service, treetjenester, profesjonelle treetjenester, Tønsberg, Tjøme, Nøtterøy, Vestfold, Holmestrand, Sande, Drammen, tilkomstteknikk, vedlikeholdstjenester, vedlikeholdstjeneste, vedlikeholdstjeneste Tønsberg, vedlikeholdstjeneste Tjøme, vedlikeholdstjeneste Nøtterøy, vedlikeholdstjeneste Vestfold, vedlikeholdstjenester Tønsberg, vedlikeholdstjenester Tjøme, vedlikeholdstjenester Nøtterøy, vedlikeholdstjenester Vestfold, vedlikeholdstjenester Holmestrand, vedlikeholdstjenester Sande, vedlikeholdstjenester Drammen, trepleie og vedlikehold, trefjerning, stubbefjerning",
   keywords:
-    "trefelling, trefelling Tønsberg, trefelling Nøtterøy, trefelling Tjøme, trefelling Vestfold, stubbefres Tønsberg, stubbefres Tjøme, stubbefres Nøtterøy, stubbefres Vestfold, vedlikehold, Kristensen Vedlikehold Service, treetjenester, profesjonelle treetjenester, Tønsberg, Tjøme, Nøtterøy, tilkomstteknikk, vedlikeholdstjenester, vedlikeholdstjeneste, vedlikeholdstjeneste Tønsberg, vedlikeholdstjeneste Tjøme, vedlikeholdstjeneste Nøtterøy, vedlikeholdstjeneste Vestfold, vedlikeholdstjenester Tønsberg, vedlikeholdstjenester Tjøme, vedlikeholdstjenester Nøtterøy, vedlikeholdstjenester Vestfold", 
+  "trefelling, Tønsberg, Nøtterøy, Tjøme, Vestfold, Holmestrand, Sande, Drammen, stubbefres, treetjenester, profesjonelle treetjenester, Kristensen Vedlikehold Service, tilkomstteknikk, trepleie, trepleieekspert, vedlikehold, vedlikeholdstjenester, vedlikeholdstjeneste, trepleie og vedlikehold, trefjerning, stubbefjerning",
   author: "Joakim Villo - Villo Utvikling",
   openGraph: {
     type: "website",
