@@ -46,15 +46,7 @@ export const Footer = () => {
             </ContactIcon>
           </div>
         </div>
-        <div>
-        <Image
-      src="/images/logo/full-logo-alternative.png"
-       width="400"
-       height="400"
-       alt="KVS-logo"
-        className={`z-50 m-4 md:h-48 h-24 w-full`}
-      />
-      </div>
+        <SimpleLogoComponent />
       </footer>
       <section className="grid place-items-center bg-KVS-black h-10">
         <p className="text-KVS-white">
