@@ -25,11 +25,20 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "https://www.kvstrefelling.no/",
+    site_name: "KVS Trefelling - Kristensen Vedlikehold Service",
     title: "KVS Trefelling - Kristensen Vedlikehold Service",
     description:
       "Spesialister på trefelling og vedlikeholdstjenester. Velg Kristensen Vedlikehold Service for pålitelige og profesjonelle treetjenester.",
     image:
       "/images/logo/full-logo-alternative.png",
+    images: [
+      {
+        url: "/images/logo/full-logo-alternative.png",
+        width: 800,
+        height: 600,
+        alt: "KVS Logo",
+      },
+    ],
   },
   icons: {
     icon: "/favicon.png",
