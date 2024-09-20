@@ -4,7 +4,7 @@ import {
   SimpleLogoOnlyTextComponent,
 } from "./baseComponents/Logo";
 
-export const IntroSection = async ({ latestVideo }) => {
+export const IntroSection = async ({ latestVideo, firstVideo, secondVideo }) => {
   return (
     <section className="grid lg:grid-cols-2 lg:grid-row-1 grid-row-2 gap-16 text-KVS-white items-center justify-center relative backdrop-blur-sm py-16">
       <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
@@ -39,8 +39,8 @@ export const IntroSection = async ({ latestVideo }) => {
           muted
           autoPlay
           className="w-full max-h-[500px] object-cover"
-          src={latestVideo.media_url}
-          alt={latestVideo.caption}
+          src={firstVideo.media_url}
+          alt={firstVideo.caption}
         />
       </div>
     </section>

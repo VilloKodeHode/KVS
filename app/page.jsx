@@ -16,11 +16,13 @@ const instaImages = await fetchInsta()
 const latestVideo = instaImages.data.find(
   (image) => image.media_type === "VIDEO"
 );
-// const allVideos = instaImages.data.filter(
-//   (image) => image.media_type === "VIDEO"
-// );
+const allVideos = instaImages.data.filter(
+  (image) => image.media_type === "VIDEO"
+);
 
-// const secondVideo = allVideos[1];
+const firstVideo = allVideos[0];
+const secondVideo = allVideos[1];
+
 
 const allImages = instaImages.data.filter(
   (image) => image.media_type !== "VIDEO"
@@ -42,11 +44,10 @@ const firstImage = allImages.slice(0, 1);
   return (
     
     <>
-      <HeroSection latestVideo={latestVideo} firstFourImages={firstFourImages} />
-      <IntroSection latestVideo={latestVideo} />
+      <HeroSection firstFourImages={firstFourImages} />
+      <IntroSection latestVideo={latestVideo} firstVideo={firstVideo} />
       <ServicesSection />
       <ContactSection/>
-      {/* <InstagramGallery latestVideo={latestVideo} firstFourImages={firstFourImages} /> */}
       <Image
         src="/images/logo/Logo-bg.svg"
         width="200"
