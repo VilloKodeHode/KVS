@@ -32,14 +32,6 @@ const firstImage = allImages.slice(0, 1);
 // const check = await fetchInsta().then(images => console.log(images))
 // const { blogPosts, sponsors } = await getContent()
 
-/* //TODO: 
-- contact form 
-- intro video?
-- oppdatert hero seksjon med insta bilder som bakgrunn
-- Fjerne gamle galleri i hero seksjonen
-- på mobile: bakgrunnsbilde (bjørka) justeres når man scroller. FIKS!
-
-*/
 
   return (
     
