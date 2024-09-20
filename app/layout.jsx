@@ -29,7 +29,7 @@ export const metadata = {
     description:
       "Spesialister på trefelling og vedlikeholdstjenester. Velg Kristensen Vedlikehold Service for pålitelige og profesjonelle treetjenester.",
     image:
-      "https://www.kvstrefelling.no/images/logo/Logo.png",
+      "https://www.kvstrefelling.no/images/logo/full-logo-alternative.png",
   },
   icons: {
     icon: "/favicon.png",
