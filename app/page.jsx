@@ -11,7 +11,7 @@ export default async function Home() {
 
 const instaImages = await fetchInsta()
 
-// const instaTester = await fetch("/api/instaFetch").then((res) => console.log(res));
+
 
 // const consoleLogImages = await fetchInsta().then(images => console.log(images))
 
@@ -42,7 +42,7 @@ const firstImage = allImages.slice(0, 1);
       <IntroSection latestVideo={latestVideo} firstVideo={firstVideo} />
       <ServicesSection />
       <ContactSection/>
-      <InstagramFeed/>
+      {/* <InstagramFeed/> */}
       <Image
         src="/images/logo/Logo-bg.svg"
         width="200"

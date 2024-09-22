@@ -10,7 +10,7 @@ const InstagramFeed = () => {
     useEffect(() => {
         const fetchInstagramPosts = async () => {
             try {
-                const res = await fetch('/api/instaFetch'); // Call your API endpoint
+                const res = await fetch('/api/instafetch'); // Call your API endpoint
                 if (!res.ok) {
                     throw new Error('Failed to fetch Instagram posts');
                 }
@@ -32,13 +32,20 @@ const InstagramFeed = () => {
 
     return (
         <div>
-            {posts.map((post) => (
+            {/* {posts.map((post) => (
                 <div key={post.id}>
                     <img src={post.media_url} alt={post.caption} />
                     <p>{post.caption}</p>
                     <a href={post.permalink} target="_blank" rel="noopener noreferrer">View on Instagram</a>
                 </div>
-            ))}
+            ))} */}
+         
+                <div key={posts[0].id}>
+                    <img src={posts[0].media_url} alt={posts[0].caption} />
+                    <p>{posts[0].caption}</p>
+                    <a href={posts[0].permalink} target="_blank" rel="noopener noreferrer">View on Instagram</a>
+                </div>
+        
         </div>
     );
 };
