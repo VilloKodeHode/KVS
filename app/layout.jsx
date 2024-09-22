@@ -22,6 +22,8 @@ export const metadata = {
   keywords:
   "trefelling, Tønsberg, Nøtterøy, Tjøme, Vestfold, Holmestrand, Sande, Drammen, stubbefres, treetjenester, profesjonelle treetjenester, Kristensen Vedlikehold Service, tilkomstteknikk, trepleie, trepleieekspert, vedlikehold, vedlikeholdstjenester, vedlikeholdstjeneste, trepleie og vedlikehold, trefjerning, stubbefjerning",
   author: "Joakim Villo - Villo Utvikling",
+  image:
+  "/images/logo/full-logo-alternative.png",
   openGraph: {
     type: "website",
     url: "https://www.kvstrefelling.no/",
