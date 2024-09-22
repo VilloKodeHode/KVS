@@ -6,10 +6,12 @@ import Image from "next/image";
 import { fetchInsta } from "./lib/instaFetch";
 import { InstagramGallery } from "./components/InstaGallery/InstagramGallery";
 import { ContactSection } from "./components/ContactSection";
+import InstagramFeed from "./components/InstaGallery/InstaTest";
 export default async function Home() {
 
-
 const instaImages = await fetchInsta()
+
+// const instaImages = await fetch("/api/instaFetch").then((res) => console.log(res));
 
 // const consoleLogImages = await fetchInsta().then(images => console.log(images))
 
@@ -40,6 +42,7 @@ const firstImage = allImages.slice(0, 1);
       <IntroSection latestVideo={latestVideo} firstVideo={firstVideo} />
       <ServicesSection />
       <ContactSection/>
+      <InstagramFeed/>
       <Image
         src="/images/logo/Logo-bg.svg"
         width="200"
