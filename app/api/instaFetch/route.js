@@ -1,24 +1,44 @@
-async function fetchInstagramMedia() {
-    const token = process.env.INSTAGRAM_TOKEN;
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=${token}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    return data;
-}
+
 
 
 
 export async function GET(req) {
+    // const url = "https://www.kvstrefelling.no/api/instaFetch?hub.mode=subscribe&hub.verify_token=VegardVilloInstaFetch&hub.challenge=test"
+    // const { searchParams } = new URL(url);
+
     const { searchParams } = new URL(req.url);
     const mode = searchParams.get('hub.mode');
     const token = searchParams.get('hub.verify_token');
     const challenge = searchParams.get('hub.challenge');
+    console.log(`Received mode: ${mode}`);
     console.log(`Received token: ${token}`);
     console.log(`Expected token: ${process.env.INSTAGRAM_WEBHOOK_VERIFY_TOKEN}`);
+    console.log(`Received challenge: ${challenge}`);
+    console.log(searchParams);
 
     if (mode && token === process.env.INSTAGRAM_WEBHOOK_VERIFY_TOKEN) {
         return new Response(challenge, { status: 200 });
     } else {
+        return new Response('Forbidden', { status: 403 });
+    }
+}
+
+
+export async function fetchInstagramMedia() {
+    const token = process.env.INSTAGRAM_TOKEN;
+    const baseURL = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=${token}`;
+
+    try {
+        const response = await fetch(baseURL);
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch Instagram content');
+        }
+
+        return new Response(JSON.stringify(data), { status: 200 });
+    } catch (error) {
+        console.error('Error fetching Instagram content:', error);
         return new Response('Forbidden', { status: 403 });
     }
 }

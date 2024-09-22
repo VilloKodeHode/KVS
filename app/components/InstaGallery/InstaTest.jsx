@@ -2,50 +2,45 @@
 
 import { useEffect, useState } from 'react';
 
-export default function InstagramFeed() {
+const InstagramFeed = () => {
     const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchInstagramPosts = async () => {
             try {
-                const res = await fetch('/api/instaFetch', 
-                    { method: 'GET' }
-                );
-                // Assuming the GET fetches the latest data
-                console.log(res)
+                const res = await fetch('/api/instaFetch'); // Call your API endpoint
+                if (!res.ok) {
+                    throw new Error('Failed to fetch Instagram posts');
+                }
                 const data = await res.json();
-                console.log(data)
-                setPosts(data);
+                setPosts(data.data); // Assuming data is in the format you expect
             } catch (error) {
-                console.error('Failed to fetch Instagram posts:', error);
+                console.error('Error fetching Instagram posts:', error);
+                setError(error.message);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchInstagramPosts();
     }, []);
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
     return (
-        <div className="instagram-feed">
-            {posts.length === 0 ? (
-                <p>No content available.</p>
-            ) : (
-                posts.map((post) => (
-                    <div key={post.id} className="instagram-post">
-                        {post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM' ? (
-                            <img src={post.media_url} alt={post.caption || 'Instagram Post'} />
-                        ) : post.media_type === 'VIDEO' ? (
-                            <video controls>
-                                <source src={post.media_url} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        ) : null}
-                        <p>{post.caption}</p>
-                        <a href={post.permalink} target="_blank" rel="noopener noreferrer">
-                            View on Instagram
-                        </a>
-                    </div>
-                ))
-            )}
+        <div>
+            {posts.map((post) => (
+                <div key={post.id}>
+                    <img src={post.media_url} alt={post.caption} />
+                    <p>{post.caption}</p>
+                    <a href={post.permalink} target="_blank" rel="noopener noreferrer">View on Instagram</a>
+                </div>
+            ))}
         </div>
     );
-}
+};
+
+export default InstagramFeed;

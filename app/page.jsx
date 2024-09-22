@@ -11,7 +11,7 @@ export default async function Home() {
 
 const instaImages = await fetchInsta()
 
-// const instaImages = await fetch("/api/instaFetch").then((res) => console.log(res));
+// const instaTester = await fetch("/api/instaFetch").then((res) => console.log(res));
 
 // const consoleLogImages = await fetchInsta().then(images => console.log(images))
 
