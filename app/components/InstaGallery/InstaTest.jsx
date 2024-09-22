@@ -8,7 +8,9 @@ export default function InstagramFeed() {
     useEffect(() => {
         const fetchInstagramPosts = async () => {
             try {
-                const res = await fetch('/api/instaFetch');
+                const res = await fetch('/api/instaFetch', 
+                    { method: 'GET' }
+                );
                 // Assuming the GET fetches the latest data
                 console.log(res)
                 const data = await res.json();
