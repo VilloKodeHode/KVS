@@ -28,7 +28,7 @@ export const Footer = () => {
             <ContactIcon text="+47 992 33 904">
               <FiPhone />
             </ContactIcon>
-            <ContactIcon text="Ospebakken 6, 3153 Tønsberg">
+            <ContactIcon text="Ekebergveien 61, 3085 Holmestrand">
               <FiMapPin />
             </ContactIcon>
           </div>
