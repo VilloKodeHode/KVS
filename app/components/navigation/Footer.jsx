@@ -10,10 +10,7 @@ import { FaHelmetSafety } from "react-icons/fa6";
 export const Footer = () => {
   return (
     <>
-      <footer
-  
-        className="bg-KVS-primary flex mt-36 lg:flex-row flex-col justify-between w-full gap-8 items-center page-padding py-8 min-h-[50vh]"
-      >
+      <footer className="bg-KVS-primary flex mt-36 lg:flex-row flex-col justify-between w-full gap-8 items-center page-padding py-8 min-h-[50vh]">
         {/* <section className="flex lg:flex-row flex-col items-center place-content-between"> */}
         <div className=" flex justify-center flex-col sm:flex-row lg:flex-col xl:flex-row">
           <div>
@@ -33,10 +30,13 @@ export const Footer = () => {
             </ContactIcon>
           </div>
           <div>
-          <a className="h-full hover:underline text-KVS-white w-full" href="https://www.instagram.com/kvstrefelling">
-            <ContactIcon text="KVS instagram">
-              <SiInstagram />
-            </ContactIcon>
+            <a
+              className="h-full hover:underline text-KVS-white w-full"
+              href="https://www.instagram.com/kvstrefelling"
+            >
+              <ContactIcon text="KVS instagram">
+                <SiInstagram />
+              </ContactIcon>
             </a>
             <ContactIcon text="Forsikret i: Tryg forsikring">
               <FaHelmetSafety />
@@ -48,12 +48,23 @@ export const Footer = () => {
         </div>
         <SimpleLogoComponent />
       </footer>
-      <section className="grid place-items-center bg-KVS-black h-10">
+      <section className="grid gap-6 place-items-center bg-KVS-black py-12">
+        <h4 className="text-KVS-white text-xl">
+          Ønsker du en lignende nettside? Ta kontakt med:
+        </h4>
+        <a
+          target="_blank"
+          href="https://www.villoutvikling.com/"
+          className="mb-2 hover:scale-105 transition"
+        >
+          <Image src="/images/logo/VU-logo.svg" width={300} height={200} />
+        </a>
         <p className="text-KVS-white">
-          Levert av{" "}
+          Nettside utviklet av{" "}
           <a
             className="underline text-[#858ee0]"
-            href="https://www.jvwebconsult.no/"
+            href="https://www.villoutvikling.com/"
+            target="_blank"
           >
             <span>Villo Utvikling</span>
           </a>
