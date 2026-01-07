@@ -40,14 +40,14 @@ export const IntroSection = async ({
           alt="Instagram logo"
           className="absolute top-2 right-2 hover:scale-110 transition duration-300"
         />
-        {/* <video
+        <video
           loop
           muted
           autoPlay
           className="w-full max-h-[500px] object-cover"
           src={firstVideo.media_url}
           alt={firstVideo.caption}
-        /> */}
+        />
       </div>
     </section>
   );
