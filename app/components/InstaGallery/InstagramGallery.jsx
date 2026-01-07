@@ -14,7 +14,7 @@ export const InstagramGallery = async ({ latestVideo, firstFourImages }) => {
       <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
       <h1 className="section-header text-KVS-white">Galleri</h1>
       <div className="w-full gap-4 min-h-screen justify-center items-center flex flex-wrap">
-        <div className="h-[400px] rounded-xl hover:outline hover:outline-2 hover:outline-KVS-secondary group overflow-hidden relative w-[300px]">
+        <div className="h-[400px] rounded-xl hover:outline-2 hover:outline-KVS-secondary group overflow-hidden relative w-[300px]">
           <div className="w-full h-[300px]">
             <video
               controls
@@ -26,7 +26,10 @@ export const InstagramGallery = async ({ latestVideo, firstFourImages }) => {
           </div>
           <div className="bg-KVS-black h-[100px] relative p-2">
             <p className="text-KVS-white text-xs">{latestVideo.caption}</p>
-            <a target="_blank" href={latestVideo.permalink} className="z-20">
+            <a
+              target="_blank"
+              href={latestVideo.permalink}
+              className="z-20">
               <Image
                 src="/images/contact-icons/instagram.png"
                 width={30}
@@ -40,9 +43,8 @@ export const InstagramGallery = async ({ latestVideo, firstFourImages }) => {
 
         {firstFourImages.map((image) => (
           <div
-            className="h-[400px] rounded-xl hover:outline hover:outline-2 hover:outline-KVS-secondary group overflow-hidden relative w-[300px]"
-            key={image.id}
-          >
+            className="h-[400px] rounded-xl hover:outline-2 hover:outline-KVS-secondary group overflow-hidden relative w-[300px]"
+            key={image.id}>
             <div className="w-full h-[300px]">
               <img
                 className="w-full h-full object-cover"
@@ -52,7 +54,10 @@ export const InstagramGallery = async ({ latestVideo, firstFourImages }) => {
             </div>
             <div className="bg-KVS-black h-[100px] relative p-2">
               <p className="text-KVS-white text-xs">{image.caption}</p>
-              <a target="_blank" href={image.permalink} className="z-20">
+              <a
+                target="_blank"
+                href={image.permalink}
+                className="z-20">
                 <Image
                   src="/images/contact-icons/instagram.png"
                   width={30}

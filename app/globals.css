@@ -1,7 +1,5 @@
 /* stylelint-disable at-rule-no-unknown */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 .main-header {
   @apply xl:text-5xl text-3xl text-center;
 }
@@ -18,7 +16,9 @@
   @apply xl:text-lg text-base text-center;
 }
 
-.heroImages > :nth-child(2), .heroImages > :nth-child(3), .heroImages > :nth-child(4) {
+.heroImages > :nth-child(2),
+.heroImages > :nth-child(3),
+.heroImages > :nth-child(4) {
   @apply hidden;
 }
 

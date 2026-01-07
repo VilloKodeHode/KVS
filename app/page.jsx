@@ -1,4 +1,3 @@
-
 import { HeroSection } from "./components/HeroSection";
 import { IntroSection } from "./components/IntroSection";
 import { ServicesSection } from "./components/ServicesSection";
@@ -7,41 +6,37 @@ import { fetchInsta } from "./lib/instaFetch";
 import { InstagramGallery } from "./components/InstaGallery/InstagramGallery";
 import { ContactSection } from "./components/ContactSection";
 import InstagramFeed from "./components/InstaGallery/InstaTest";
+
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
+  const instaImages = await fetchInsta();
 
-const instaImages = await fetchInsta()
+  // const consoleLogImages = await fetchInsta().then(images => console.log(images))
 
+  const imagesData = instaImages?.data || [];
 
+  const latestVideo = imagesData.find((image) => image.media_type === "VIDEO");
+  const allVideos = imagesData.filter((image) => image.media_type === "VIDEO");
 
-// const consoleLogImages = await fetchInsta().then(images => console.log(images))
+  const firstVideo = allVideos[0];
+  const secondVideo = allVideos[1];
 
-const latestVideo = instaImages.data.find(
-  (image) => image.media_type === "VIDEO"
-);
-const allVideos = instaImages.data.filter(
-  (image) => image.media_type === "VIDEO"
-);
-
-const firstVideo = allVideos[0];
-const secondVideo = allVideos[1];
-
-
-const allImages = instaImages.data.filter(
-  (image) => image.media_type !== "VIDEO"
-);
-const firstFourImages = allImages.slice(0, 4);
-const firstImage = allImages.slice(0, 1);
-// const check = await fetchInsta().then(images => console.log(images))
-// const { blogPosts, sponsors } = await getContent()
-
+  const allImages = imagesData.filter((image) => image.media_type !== "VIDEO");
+  const firstFourImages = allImages.slice(0, 4);
+  const firstImage = allImages.slice(0, 1);
+  // const check = await fetchInsta().then(images => console.log(images))
+  // const { blogPosts, sponsors } = await getContent()
 
   return (
-    
     <>
       <HeroSection firstFourImages={firstFourImages} />
-      <IntroSection latestVideo={latestVideo} firstVideo={firstVideo} />
+      <IntroSection
+        latestVideo={latestVideo}
+        firstVideo={firstVideo}
+      />
       <ServicesSection />
-      <ContactSection/>
+      <ContactSection />
       {/* <InstagramFeed/> */}
       <Image
         src="/images/logo/Logo-bg.svg"

@@ -4,7 +4,13 @@ import {
   SimpleLogoOnlyTextComponent,
 } from "./baseComponents/Logo";
 
-export const IntroSection = async ({ latestVideo, firstVideo, secondVideo }) => {
+export const IntroSection = async ({
+  latestVideo,
+  firstVideo,
+  secondVideo,
+}) => {
+  console.log("firstVideo", firstVideo);
+
   return (
     <section className="grid lg:grid-cols-2 lg:grid-row-1 grid-row-2 gap-16 text-KVS-white items-center justify-center relative backdrop-blur-sm py-16">
       <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
@@ -34,14 +40,14 @@ export const IntroSection = async ({ latestVideo, firstVideo, secondVideo }) => 
           alt="Instagram logo"
           className="absolute top-2 right-2 hover:scale-110 transition duration-300"
         />
-        <video
+        {/* <video
           loop
           muted
           autoPlay
           className="w-full max-h-[500px] object-cover"
           src={firstVideo.media_url}
           alt={firstVideo.caption}
-        />
+        /> */}
       </div>
     </section>
   );
