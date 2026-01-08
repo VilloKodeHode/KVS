@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${figtree.className} overflow-x-hidden bg-gradient-to-b from-[#7fb1e0] to-[#34424e]`}
+        className={`${figtree.className} overflow-x-hidden bg-gradient-to-br from-slate-800 to-slate-900 text-KVS-white`}
       >
         <Header />
         <PageLayout>{children}</PageLayout>

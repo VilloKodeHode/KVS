@@ -1,45 +1,46 @@
-"use client";
-import Image from "next/image";
-import { ContactButton } from "./Buttons";
-import { HeroGallery } from "./HeroGallery";
+import { ContactButton, ServiceSectionButton } from "./Buttons";
+import { HeroImageSlider } from "./HeroImageSlider";
 
-export const HeroSection = ({ firstFourImages, latestVideo }) => {
+export const HeroSection = ({ images }) => {
   return (
-    <section className="z-10 gap-16 flex flex-col justify-center min-h-[calc(100vh-112px)] items-center">
-      <div className="animate-slideInRight">
-        <div className="z-10 text-center p-4 ml:p-16 text-shadow text-KVS-white flex flex-col ml:gap-8 gap-4 h-fit justify-center">
-          <h1 className="main-header">Velkommen til KVS</h1>
+    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden pt-24 pb-12 lg:pt-0">
+      {/* Decorative Background Glow */}
 
-          <h2 className="large-paragraph hidden sm:block">
-            Usikker på hva du skal gjøre med treet som skygger for solen?
-          </h2>
+      <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center z-10">
+        {/* Left Column: Content */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 animate-slideInFromBottom order-2 lg:order-1">
+          <div className="space-y-4">
+            <div className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-KVS-secondary text-sm font-semibold uppercase tracking-widest mb-4">
+              Vestfold & Omegn
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-tight drop-shadow-lg">
+              Sikker Trefelling. <br />
+              <span className="text-KVS-secondary">Profesjonelt</span> Utført.
+            </h1>
+          </div>
 
-          <h3 className="section-header">
-            Få en <span className="uppercase text-KVS-secondary">gratis</span>{" "}
-            befaring.
-          </h3>
-          <h4 className="large-paragraph hidden sm:block">
-            Ta kontakt for en uforpliktende prat, så finner vi en løsning.
-          </h4>
-          <ContactButton />
+          <p className="text-lg lg:text-xl text-gray-200 leading-relaxed max-w-xl">
+            Vi håndterer alt fra vanskelige trær til tomterydding med presisjon
+            og sikkerhet. Sertifisert kompetanse for din trygghet.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <ContactButton />
+            <ServiceSectionButton />
+          </div>
+
+          <div className="flex items-center gap-4 text-sm text-gray-400 mt-4">
+            <span className="flex items-center gap-2">✓ Gratis Befaring</span>
+            <span className="flex items-center gap-2">✓ Forsikret</span>
+            <span className="flex items-center gap-2">✓ Sertifisert</span>
+          </div>
+        </div>
+
+        {/* Right Column: Visuals */}
+        <div className="w-full relative animate-slideInRight order-1 lg:order-2">
+          <HeroImageSlider images={images} />
         </div>
       </div>
-
-      <div className="heroImages h-[100vh] absolute top-0 group grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden w-screen right-1/2 -z-10 translate-x-1/2 opacity-50">
-        {firstFourImages.map((image) => (
-        <div className={``} key={image.id}>
-            <img
-              className="w-full h-full object-cover"
-              src={image.media_url}
-              alt={image.caption}
-            />
-        </div>
-      ))}
-      </div>
-
-  
-
-      {/* <HeroGallery /> */}
     </section>
   );
 };

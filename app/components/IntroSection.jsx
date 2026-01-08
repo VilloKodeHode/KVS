@@ -9,45 +9,49 @@ export const IntroSection = async ({
   firstVideo,
   secondVideo,
 }) => {
-  console.log("firstVideo", firstVideo);
-
   return (
-    <section className="grid lg:grid-cols-2 lg:grid-row-1 grid-row-2 gap-16 text-KVS-white items-center justify-center relative backdrop-blur-sm py-16">
-      <div className="absolute-center w-screen shadow-KVS-primary shadow bg-KVS-primary bg-opacity-40 h-full" />
-      <article className="flex flex-col gap-8 relative">
+    <section className="container mx-auto px-4 py-24 grid lg:grid-cols-2 gap-16 items-center text-KVS-white relative z-10">
+      <article className="flex flex-col gap-8 relative z-10">
         <SimpleLogoComponent />
-        <h2 className="section-header underline underline-offset-[6px]">
+        <h2 className="section-header text-left underline underline-offset-8 decoration-KVS-secondary/50">
           Utfører ditt oppdrag enkelt og effektivt, små og store i Vestfold!
         </h2>
-        <div className="flex flex-col gap-8 text-center justify-center">
-          <p className="large-paragraph max-w-3xl">
+        <div className="flex flex-col gap-6 text-left">
+          <p className="text-xl leading-relaxed text-gray-100">
             Jeg er sertifisert tilkomsttekniker og har lang erfaring med
             taubasert metode offshore. Effektivt når det er begrenset med plass,
-            men også for å unngå skade på nærliggende områder. Står treet
-            vanskelig til benyttes seksjonsfelling som metode- treet kuttes i
-            mindre deler for en kontrollert og trygg nedfelling.
+            men også for å unngå skade på nærliggende områder.
           </p>
-          <p className="large-paragraph max-w-3xl">
+          <p className="text-xl leading-relaxed text-gray-100">
+            Står treet vanskelig til benyttes seksjonsfelling som metode – treet
+            kuttes i mindre deler for en kontrollert og trygg nedfelling.
+          </p>
+          <p className="text-xl font-bold text-KVS-secondary mt-4">
             Ring meg for en hyggelig prat om ditt prosjekt - Vegard Kristensen!
           </p>
         </div>
       </article>
-      <div className="flex justify-center items-center relative">
-        <Image
-          src="/images/contact-icons/instagram.png"
-          width={30}
-          height={30}
-          alt="Instagram logo"
-          className="absolute top-2 right-2 hover:scale-110 transition duration-300"
-        />
-        <video
-          loop
-          muted
-          autoPlay
-          className="w-full max-h-[500px] object-cover"
-          src={firstVideo.media_url}
-          alt={firstVideo.caption}
-        />
+
+      <div className="relative">
+        {/* Visual Card Effect for Media */}
+        <div className="glass-card p-4 rotate-2 hover:rotate-0 transition-transform duration-500">
+          {firstVideo ? (
+            <video
+              loop
+              muted
+              autoPlay
+              className="w-full max-h-[600px] object-cover rounded-xl shadow-2xl"
+              src={firstVideo.media_url}
+              alt={firstVideo.caption}
+            />
+          ) : (
+            <img
+              className="w-full max-h-[600px] object-cover rounded-xl shadow-2xl"
+              src="/images/work/klatre-pose.webp"
+              alt="Klatre pose"
+            />
+          )}
+        </div>
       </div>
     </section>
   );

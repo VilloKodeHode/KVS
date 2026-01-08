@@ -7,9 +7,18 @@ export const ContactButton = () => {
   return (
     <button
       onClick={(event) => scrollToSection(event, "#kontakt")}
-      className="text-3xl self-center text-white shadow shadow-black bg-KVS-primary w-fit py-4 px-8 rounded-full hover:scale-105 duration-100 active:scale-95"
-    >
+      className="text-xl md:text-3xl cursor-pointer self-center text-white shadow shadow-black bg-KVS-primary w-full sm:w-fit py-4 px-8 rounded-full hover:scale-105 duration-100 active:scale-95">
       Ta kontakt
+    </button>
+  );
+};
+
+export const ServiceSectionButton = () => {
+  return (
+    <button
+      onClick={(event) => scrollToSection(event, "#tjenester")}
+      className="text-xl md:text-3xl self-center cursor-pointer text-white shadow shadow-black bg-KVS-primary w-full sm:w-fit py-4 px-8 rounded-full hover:scale-105 duration-100 active:scale-95">
+      Våre tjenester
     </button>
   );
 };
@@ -38,8 +47,7 @@ export function ScrollToTopButton() {
       onClick={scrollToTop}
       className={`z-50 p-1 hidden sm:block fixed bottom-4 right-4 transition-all duration-200 rounded-full hover:scale-125  ${
         isVisible ? "opacity-100" : "opacity-0 cursor-default user-select-none"
-      }`}
-    >
+      }`}>
       <FiArrowUpCircle
         className={`w-12 h-12 rounded-full fill-KVS-primary text-KVS-secondary`}
         strokeWidth={1.5}

@@ -1,19 +1,135 @@
 /* stylelint-disable at-rule-no-unknown */
 @import "tailwindcss";
+
+@theme {
+  /* Screens */
+  --breakpoint-ms: 320px;
+  --breakpoint-mm: 375px;
+  --breakpoint-ml: 425px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-2xl: 1536px;
+
+  /* Colors */
+  --color-KVS-primary: #223d56;
+  --color-KVS-secondary: #fad138;
+  --color-KVS-white: #e5ecf2;
+  --color-KVS-black: #020c17;
+  --color-KVS-gray: #444444;
+  --color-KVS-green: #757f3f;
+  --color-KVS-lightGreen: #bdcf46;
+
+  /* Animations */
+  --animate-slideInRight: slideInRight 1.5s ease-in-out;
+  --animate-slideInLeft: slideInLeft 1.5s ease-in-out;
+  --animate-slideInFromTop: slideDown 0.5s ease-in-out;
+  --animate-slideInFromBottom: slideUp 0.5s ease-in-out;
+  --animate-appear: appear 0.5s ease-in-out;
+
+  /* Keyframes */
+  @keyframes slideInRight {
+    0% {
+      translate: -100%;
+      opacity: 0%;
+      display: none;
+    }
+    100% {
+      translate: -0%;
+      opacity: 100%;
+      display: block;
+    }
+  }
+  @keyframes slideOutRight {
+    0% {
+      translate: -0%;
+      opacity: 100%;
+      display: block;
+    }
+    100% {
+      translate: -100%;
+      opacity: 0%;
+      display: none;
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      translate: 100%;
+      opacity: 0%;
+      display: none;
+    }
+    100% {
+      translate: 0%;
+      opacity: 100%;
+      display: block;
+    }
+  }
+  @keyframes slideOutLeft {
+    0% {
+      translate: 0%;
+      opacity: 100%;
+      display: block;
+    }
+    100% {
+      translate: 100%;
+      opacity: 0%;
+      display: none;
+    }
+  }
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0%;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0%;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+}
 .main-header {
-  @apply xl:text-5xl text-3xl text-center;
+  @apply xl:text-6xl lg:text-5xl text-4xl font-bold text-center tracking-tight text-white drop-shadow-lg;
 }
 
 .section-header {
-  @apply xl:text-3xl text-2xl text-center;
+  @apply xl:text-4xl text-3xl font-bold text-center mb-12 text-white drop-shadow-md;
 }
 
 .sub-header {
-  @apply xl:text-2xl text-xl text-center;
+  @apply xl:text-2xl text-xl font-semibold text-center text-gray-200;
 }
 
 .large-paragraph {
-  @apply xl:text-lg text-base text-center;
+  @apply xl:text-xl text-lg text-center leading-relaxed text-gray-100 max-w-2xl mx-auto;
+}
+
+/* Premium Glassmorphism Utilities */
+.glass-panel {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl rounded-3xl;
+}
+
+.glass-card {
+  @apply backdrop-blur-sm bg-white/5 border border-white/10 shadow-lg rounded-2xl transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:shadow-2xl hover:-translate-y-1;
 }
 
 .heroImages > :nth-child(2),
@@ -75,6 +191,10 @@
 
 .text-shadow {
   text-shadow: 2px 2px 1px #000000;
+}
+
+.text-shadow-strong {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 2px rgba(0, 0, 0, 1);
 }
 
 /*# sourceMappingURL=globals.css.map */

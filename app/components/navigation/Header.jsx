@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
 import MENU_LIST from "../../data/menu_list";
 import LogoComponent from "../baseComponents/Logo";
-import {SiInstagram } from "react-icons/si";
+import { SiInstagram } from "react-icons/si";
 import HamburgerBar from "./Hamburgerbar";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -52,8 +52,7 @@ export default function Header({ currentPath }) {
 
       <header
         id="#hjem"
-        className={`relative bg-KVS-primary transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-2 mm:px-4 mx-auto sm:px-6 lg:px-12`}
-      >
+        className={`relative bg-KVS-primary transition-all duration-1000 z-50 bg-opacity-[0.925] flex flex-col w-full justify-center px-2 mm:px-4 mx-auto sm:px-6 lg:px-12`}>
         <div className="z-50 flex items-center justify-between">
           <div className="grid items-center h-[112px] min-w-[200px] gap-8">
             <div className="relative  z-40 flex flex-row items-center w-fit">
@@ -65,7 +64,10 @@ export default function Header({ currentPath }) {
               />
             </div>
           </div>
-          <Navbar currentPath={currentPath} MENU_LIST={MENU_LIST} />
+          <Navbar
+            currentPath={currentPath}
+            MENU_LIST={MENU_LIST}
+          />
 
           <HamburgerBar
             handleMenuToggle={handleMenuToggle}
@@ -81,15 +83,17 @@ export default function Header({ currentPath }) {
         <a
           href="https://www.instagram.com/kvstrefelling/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
           target="_blank"
-          className={`flex transition-all absolute origin-right z-40 items-center gap-4 m-4 ${
-            notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"
-          }`}
-        >
-          <p className="text-sm mm:text-base text-right">sjekk ut tidligere utførte oppdrag</p>
-          <FaArrowRight className="animate-pulse" />
-          <SiInstagram
-            className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
-          />
+          className={`glass-card fixed top-28 right-4 z-50 flex items-center gap-3 px-6 py-3 text-KVS-white hover:text-KVS-secondary transition-all duration-300 transform hover:scale-105 ${
+            notTop
+              ? "translate-x-0 opacity-100"
+              : "translate-x-10 opacity-0 pointer-events-none"
+          }`}>
+          <span className="text-sm font-semibold hidden md:block">
+            Sjekk ut tidligere oppdrag
+          </span>
+          <span className="text-sm font-semibold md:hidden">Instagram</span>
+          <FaArrowRight className="animate-pulse text-KVS-secondary" />
+          <SiInstagram className="w-6 h-6" />
         </a>
       </div>
     </>

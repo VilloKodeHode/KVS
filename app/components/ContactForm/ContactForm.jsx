@@ -69,14 +69,15 @@ export default function ContactForm() {
       {error && (
         <div className="mb-4 p-3 bg-red-100 text-red-800 rounded">{error}</div>
       )}
-      <form className="" onSubmit={handleSubmit}>
+      <form
+        className=""
+        onSubmit={handleSubmit}>
         <InputWithLabel
           type="text"
           name="name"
           placeholder="Your name"
           value={form.name}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           Navn
         </InputWithLabel>
 
@@ -85,8 +86,7 @@ export default function ContactForm() {
           name="email"
           placeholder="example@example.com"
           value={form.email}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           Email
         </InputWithLabel>
 
@@ -95,8 +95,7 @@ export default function ContactForm() {
           name="subject"
           placeholder="Ex. Membership"
           value={form.subject}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           Subject
         </InputWithLabel>
 
@@ -105,16 +104,14 @@ export default function ContactForm() {
           name="message"
           placeholder="Your message"
           value={form.message}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           Message
         </InputWithLabel>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full p-2 bg-primary text-white font-semibold rounded hover:bg-red-500 transition duration-200"
-        >
+          className="w-full p-2 bg-primary text-white font-semibold rounded hover:bg-red-500 transition duration-200">
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
@@ -178,63 +175,61 @@ export const AltContactForm = () => {
   };
 
   return (
-    <div className="w-full shadow-KVS-black flex flex-col justify-center text-KVS-white p-4 sm:p-8 lg:p-16 bg-KVS-black bg-opacity-90 rounded-xl shadow-md">
-      {/* <h1 className="text-2xl font-bold mb-4">Contact Us</h1> */}
+    <div className="w-full relative z-10">
       {responseMessage && (
-        <div className="mb-4 p-3 bg-green-100 text-green-800 rounded">
+        <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 text-green-200 rounded-xl">
           {responseMessage}
         </div>
       )}
       {error && (
-        <div className="mb-4 p-3 bg-red-100 text-red-800 rounded">{error}</div>
+        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-200 rounded-xl">
+          {error}
+        </div>
       )}
-      <form className="" onSubmit={handleSubmit}>
+      <form
+        className="flex flex-col gap-2"
+        onSubmit={handleSubmit}>
         <InputWithLabel
           type="text"
           name="name"
           placeholder="Ditt navn"
           value={form.name}
-          onChange={handleChange}
-        >
+          onChange={handleChange}>
           Navn
         </InputWithLabel>
 
         <InputWithLabel
           type="email"
           name="email"
-          placeholder="example@example.com"
+          placeholder="din@epost.no"
           value={form.email}
-          onChange={handleChange}
-        >
-          Email
+          onChange={handleChange}>
+          E-post
         </InputWithLabel>
 
         <InputWithLabel
           type="text"
           name="subject"
-          placeholder="Felling og rydding av tre"
+          placeholder="Hva gjelder det?"
           value={form.subject}
-          onChange={handleChange}
-        >
-          Subject
+          onChange={handleChange}>
+          Emne
         </InputWithLabel>
 
         <InputWithLabel
           type="textarea"
           name="message"
-          placeholder="Din melding"
+          placeholder="Beskriv oppdraget..."
           value={form.message}
-          onChange={handleChange}
-        >
-          Message
+          onChange={handleChange}>
+          Melding
         </InputWithLabel>
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full p-2 bg-[#4073a2] text-KVS-black font-semibold rounded hover:bg-KVS-secondary transition duration-200"
-        >
-         {isSubmitting ? "Sending..." : "Send Message"}
+          className="w-full mt-4 cursor-pointer py-4 bg-KVS-primary hover:bg-KVS-secondary hover:text-KVS-black text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed border border-white/5">
+          {isSubmitting ? "Sender..." : "Send Melding"}
         </button>
       </form>
     </div>
