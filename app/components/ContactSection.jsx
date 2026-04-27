@@ -18,7 +18,7 @@ export const ContactSection = () => {
             <span className="text-KVS-secondary">uforpliktende</span> befaring
           </h2>
 
-          <AltContactForm />
+          {/* <AltContactForm /> */}
         </div>
       </div>
     </section>
