@@ -83,7 +83,7 @@ export default function Header({ currentPath }) {
         <a
           href="https://www.instagram.com/kvstrefelling/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
           target="_blank"
-          className={`glass-card fixed top-28 right-4 z-50 flex items-center gap-3 px-6 py-3 text-KVS-white hover:text-KVS-secondary transition-all duration-300 transform hover:scale-105 ${
+          className={`glass-card fixed top-28 right-4 z-50 flex items-center gap-3 px-2 md:px-6 py-2 md:py-3 text-KVS-white hover:text-KVS-secondary transition-all duration-300 transform hover:scale-105 ${
             notTop
               ? "translate-x-0 opacity-100"
               : "translate-x-10 opacity-0 pointer-events-none"

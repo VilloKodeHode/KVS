@@ -3,6 +3,7 @@ import { IntroSection } from "./components/IntroSection";
 import { ServicesSection } from "./components/ServicesSection";
 import Image from "next/image";
 import { ContactSection } from "./components/ContactSection";
+import { CtaSection } from "./components/CtaSection";
 import { staticImages } from "./data/images";
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
       <HeroSection images={allImages} />
       <IntroSection firstVideo={firstVideo} />
       <ServicesSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
+      <CtaSection />
       <Image
         src="/images/logo/Logo-bg.svg"
         width="200"
